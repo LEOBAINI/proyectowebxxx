@@ -1,0 +1,300 @@
+          USUARIO                                 USER LOGGED          DOM     NOMBRE PC    W2K     WXP    W7     O 2000    O 2003   O 2007    NB     DESKTOP SECTOR                         EMPRESA
+         1IGNACIO DE MARTIN                       idemartin                   1         1067       1                                1                        1GALPON                         TF
+         2NORBERTO FERNANDEZ                      nfernandez                  1057                 1                                1                        1GALPON                         TF
+         3NATALIA BUSTO                           nbusto                      1          228       1                                1                        1GALPON                         TF
+         4MARCELA PECCHIA                         mpecchia                    1          800                     1                            1              1GALPON                         TF
+         5MILTON CLASSEN                          classen                     1         1054              1                                   1              1GALPON                         TF
+         6JESICA VILLALBA                         jesicav                     1         1000                     1                  1                        1GALPON                         TF
+         7PABLO CABEZA                            pcabeza                     1         1022              1                                   1              1SAN EDUARDO                    TF
+         8SILVIO NUÑEZ                            snuñez                      1         1049                     1                            1      1        SAN EDUARDO                    TF
+         9DIEGO TORRES                            usuario                     1         1076              1                                   1              1SAN EDUARDO                    TF
+        10SEBASTIAN PARAMO                        sparamo                     1          962                     1                            1      1        SAN EDUARDO                    TF
+        11MARCELO LEGUIZAMON                      mleguizamon                 1          357              1                         1                        1DESPACHO                       TF
+        12MARTA GALATRO                           mgalatro                    1173C                       1                         1                        1DESPACHO                       TF
+        13AMANDA TORRES                           atorres                     1          153              1                         1                        1DESPACHO                       TF
+        14FEDERICO PADILLA                        manzilog                    1         1080              1                                   1              1DESPACHO                       TF
+        15RADIOS                                  fpadilla                    1          351       1                                1                        1DESPACHO                       TF
+        16MARTIN FURLONG                          mfurlong                    1                                  1                            1              1ADMINISTRACION                 TF
+        17PATRICIA ANCIN                          pancin                      1                                  1                            1              1ADMINISTRACION                 TF
+        18JUAN MACALLI                            juanm                       1         1002              1                                   1              1ADMINISTRACION                 TF
+        19ROMINA GUILLIN                          nelsonp                     1062                        1                                   1              1ADMINISTRACION                 TF
+        20MARIANO OLIVERA                         molivera                    1         1036                     1                            1      1        ADMINISTRACION                 TF
+        21DIEGO MAUCIERI                          diegom                      1         1035                     1                            1              1ADMINISTRACION                 TF
+        22MAIRA BOGADO                            mairabgb                    1         1013              1                                   1              1ADMINISTRACION                 TF
+        23MARIA LAURA GAMBIER                     mlgambier                   1034                        1                         1                        1ADMINISTRACION                 TF
+        24JULIO CHIOSSONE                         jchiossone                  1         1038              1                         1                        1ADMINISTRACION                 TF
+        25DANIEL ROMANO                           danielr                     1          745              1                         1                        1ADMINISTRACION                 TF
+        26GABRIELA PITTAVINO                      gpittavino                  1         1031                     1                            1              1ADMINISTRACION                 TF
+        27MARCELO ESCUDERO                        estudioalonso               1075                 1                                1                        1ADMINISTRACION                 TF
+        28MARIA DE MIGUEL                         mdemiguel                   1          961                     1                            1      1        ADMINISTRACION                 TF
+        29EDGARDO JOHANNETON                                                  1                           1                                   1      1        ADMINISTRACION                 TF
+        30PUESTO1                                 seguridad                   0          113       1                                                         1SEGURIDAD                      TF
+        31EMANUEL DIAZ                            ediaz                       1          561       1                                1                        1TRAFICO INT.                   TF
+        32BERNARDO GARCIA                         bgarcia                     1         1082                     1                            1              1TRAFICO INT.                   TF
+        33CARMEN CLOSTER                          ccloster                    11021A                      1                                   1              1TRAFICO INT.                   TF
+        34ANA ROSANO                              arosano                     1049                 1                                1                        1TRAFICO INT.                   TF
+        35DANIEL VELAZQUEZ                        danielv                     1          706                     1                            1              1TRAFICO INT.                   TF
+        36MARTIN CREMONINI                        martinc                     1          910                     1                            1      1        TRAFICO INT.                   TF
+        37GABRIEL PAGURA                          gpagura                     1                                  1                            1      1        TRAFICO INT.                   TF
+        38OSCAR GOMEZ                             ogomez                      1          256              1                         1                        1TRAFICO INT.                   TF
+        39KARINA BALZAN                           karinab                     1          117              1                         1                        1TRAFICO INT.                   TF
+        40NICOLAS RETAMOZO                        cborda                      1          248              1                         1                        1FLOTA PROPIA                   TF
+        41MARIELA MASTELLONE                      marielam                    1         1020              1                                   1              1FLOTA PROPIA                   TF
+        42NESTOR TWIFORD                          nestort                     1         1097              1                         1                        1FLOTA PROPIA                   TF
+        43SERGIO ANCIN                            sancin                      1          213              1                         1                        1FLOTA PROPIA                   TF
+        44SERGIO ANCIN                            usuario                     1          571              1                         1                        1FLOTA PROPIA                   TF
+        45DANIEL HERRERA                          dherrera                    1         1074              1                         1                        1FLOTA PROPIA                   TF
+        46PUESTO2                                 tffur114                    0puerta1                    1                                                  1SEGURIDAD                      TF
+        47JULIO ESPECHE                           jespeche                    1         1073              1                         1                1        SAN EDUARDO                    TF
+        48JESICA GUZMAN                           jguzman                     1          906              1                                   1              1SAN EDUARDO                    TF
+        49NATALIA SOULA                           andrean                     1         1028                     1                            1      1        SAN EDUARDO                    TF
+        50CLAUDIA FLAMENCO                        flamenco                    1060                        1                         1                        1SAN EDUARDO                    TF
+        51ELIANA VILLAVICENCIO                    leandrovila                 1          123              1                         1                        1SAN EDUARDO                    TF
+        52FERNANDO LEGUIZAMON                     fleguizamon                 1         1016              1                                   1              1SAN EDUARDO                    TF
+        53JUAN ALVAREZ                            jalvarez                    1pcwin77                           1                            1      1        CALIDAD                        TF
+        54MANUELA BARREIROS                       manuelab                    1vdsII                      1                         1                1        ADMINISTRACION                 TF
+        55LILIANA MANCINO                         mancinol                    1         1068              1                                   1              1ADMINISTRACION                 TF
+        56ANDREA BERTON                           aberton                     1          970              1                                   1              1ADMINISTRACION                 TF
+        57JOSE ASPRELLA                           JASPRELLA                   1         1069              1                                   1      1        ADMINISTRACION                 TF
+        58GRACIELA RODRIGUEZ                      gracielarodriguez           1041                               1                            1              1ADMINISTRACION                 TF
+        59PCCOT                                   usuario                     1fur059a                    1                         1                        1SERVIDORES                     TF
+        60MANUELA MARZOL                          mmarzol                     1         1039              1                                   1              1ADMINISTRACION                 TF
+        61PAOLA ROGNONI                           prognoni                    1msnoleg01                  1                         1                        1ADMINISTRACION                 TF
+        62LILIANA VENTURA                         lilianav                    1012                        1                                   1              1ADMINISTRACION                 TF
+        63STELLA ABREU                            sabreu                      1031                 1                       1                                 1ADMINISTRACION                 TF
+        64EX CINTIA                               usuario                     1          103       1                                1                        1ADMINISTRACION                 TF
+        65NICOLAS DI NUCCI                        nicolasd                    1         1045              1                                   1      1        ADMINISTRACION                 TF
+        66VALERIA BARAHONA                        vbarahona                   1         1063                     1                            1              1ADMINISTRACION                 TF
+        67EDUARDO FURLONG (H)                                                  LENOVOEDGE                        1                            1      1        ADMINISTRACION                 TF
+        68OSCAR ARLEO                             oarleo                      1          214              1                         1                        1TRAFICO NACIONAL               TF
+        69HECTOR SANCHEZ                          hectors                     1067                        1                                   1              1TRAFICO NACIONAL               TF
+        70FERNANDO FERNANDEZ                      fernandof                   1portableff                 1                                   1      1        TRAFICO NACIONAL               TF
+        71EDUARDO SCHIZZADA                       schizzada                   1           85              1                         1                        1TRAFICO NACIONAL               TF
+        72NICO DIAZ                               ndiaz                       1           10              1                                   1              1TRAFICO NACIONAL               TF
+        73LEO GIANNI                              lgiani                      1          999                     1                            1      1        TRAFICO NACIONAL               TF
+        74JAVIER AMARO                            jamaro                      1         1040              1                                   1              1TRAFICO NACIONAL               TF
+        75CARLOS SAVIO                            csavio                      1          749              1                         1                        1TRAFICO NACIONAL               TF
+        76RODOLFO LOPEZ                           rodolfol                    1         1048              1                                   1              1TRAFICO NACIONAL               TF
+        77EDUARDO ALPIREZ                         ealpirez                    1FUR013C                    1                         1                        1TRAFICO NACIONAL               TF
+        78 AYELÉN THOMAS                          ayelent                     1          915              1                                   1              1TRAFICO NACIONAL               TF
+        79NUMERO SECRETO 1                                                    0                                                                              1GALPON                         TF
+        80NUMERO SECRETO 2                                                    0                                                                              1GALPON                         TF
+        81GIANINA AGAFONOFF                                                   1         1034                     1                  1                        1TRAFICO NACIONAL               TF
+        82FURBBB                                  administrador               1furbbb              1                                1                        1SISTEMAS                       TF
+        83GERMAN MENDIETA                         german                      1          234              1                         1                        1GALPON                         TF
+        84CBA                                                                                                    7                            7              7
+        85FURLONG NORTE                                                                                          3                            3              3
+
+          PCS VISIBLES                                                                            11     49     31         1       35        53     16      77Total Visibles                             93
+         1SUPERVISOR                              furlong                      FURTASA0000                1                                   1              1TOYOTA                         TF
+         2FEDERICO SERRES                         fserres                      FUR218                     1                         1                        1TOYOTA                         TF
+         3ALEJANDRO TOLEDO                        furlong                      FURTASA02                  1                         1                        1TOYOTA                         TF
+         4VALERIA PATHEY                          usuario                      FURVALERIA                        1                            1              1TOYOTA                         TF
+         5SUSANA DI GIORNO                        furlong                      FURATZ01                   1                         1                        1TZ                             TF
+         6GENERICO                                furlong                      FURATZ02                   1                         1                        1TZ                             TF
+         7CLAUDIO RIVOIRA                         furlong                      FUR1004                    1                         1                        1FN                             TF
+         8CARLOS BORDA                            furlong                      FUR1044                           1                            1              1FN                             TF
+         9GENERICO                                furlong                      FUR047                                      1        1                        1FN                             TF
+        10EDUARDO FURLONG (P)                                                                             1                         1                        1ADMINISTRACION                 TF
+        11EDUARDO FURLONG (P)                                                 0                                  1                            1      1        ADMINISTRACION                 TF
+        12PCENTRADA                                                                                                                                          1TRAFICO NACIONAL               TF
+        13HERNAN BRAGA MENENDEZ                   ?                    ?       ?                                 1                            1      1        TRAFICO NACIONAL               TF
+        14CESAR CHIAPPERO                         cchiappero                  0PORTABLEX2                        1                            1      1        GALPONES                       TF
+        15LEONARDO BAINI                                                                                         1                            1      1        SISTEMAS                       TF
+        16RICARDO BIECHER                                                                                        1                            1      1        SISTEMAS                       TF
+        17CRISTIAN ROJAS                          cristianr                   1          802                     1                            1              1SAN EDUARDO                    TF
+        18SILVIO NUÑEZ                                                                                           1                            1      1
+        19MARTIN CREMONINI                        martinc                     1         1051                     1                            1      1        ADMINISTRACION                 TF
+        20GERARDO SAULQUIN                                                                                       1                            1      1
+        21HUGO PORTILLO                                                                                          1                            1      1
+        22FERNANDO ORLIAQ                         forliaq                     0         1053                     1                            1      1        SAN EDUARDO                    TF
+        23GUIDO PEREZ                             gperez                      1         1079                     1                            1      1        TRAFICO NACIONAL               TF
+        24LUIS CABRERA                            lcabrera                    1961A                              1                            1      1        TRAFICO NACIONAL               TF
+        25ALBERTO LARDIZABAL                      alardizabal                 1                           1                                   1      1        ADMINISTRACION                 TF
+        26OMAR RUIZ DIAZ                          ordiaz                      1         1058              1                                   1      1        CALIDAD                        TF
+        27CARLOS SCORZIELLO                                                   1                                  1                            1      1        DESPACHO                       TF
+        28LEANDRO MORALES                         lmorales                    1         1085              1                         1                        1TRAFICO INT.                   TF
+        29PC GIS TEST (VMWARE)                                                                                                                               1                               TF
+        30FURLONG5                                administrador               1FURLONG5                                                                      1SISTEMAS                       TF
+        31FURLONG4                                administrador               1FURLONG4                                                                      1SISTEMAS                       TF
+        32FUR011                                  administrador               1FUR011                                                                        1SISTEMAS                       TF
+        33HOST FUR011                             administrador               1                                                                              1SISTEMAS                       TF
+        34PC DERECHA OMAR (LB)                                                                                                                               1SISTEMAS                       TF
+        35LAURA                                   capacitacion                                            1                         1                1        CAPACITACION                   TF
+        36DANIEL CORONEL                          dcoronel                    1         1094                     1                            1      1        FRIGOR                         TF
+        37EDUARDO FURLONG (P)II                   elfurlong                   1         1093                     1                                           1                               TF
+        38FLORENCIA ARMANDO                       farmando                    1         1086              1                         1                1        SEGURIDAD E HIGIENE            TF
+        39MARIANO TAPIA                           usuario                               1083              1                         1                        1PDI                            TF
+        40TRAILBACK                               usuario                     1         1088              1                         1                        1CLOROX                         TF
+        41TRAILBACK                               usuario                     1         1089              1                         1                        1CLOROX                         TF
+        42VALERIA BARAHONA                        usuario                               1090                     1                            1      1        NETBOOK W7 HOME                TF
+        43VANESA TON                              vanesat                     1         1087              1                         1                        1ADMINISTRACION                 TF
+        44PAOLA GARCIA                            pgarcia                     1         1096       1                                1                        1ADMINISTRACION                 TF
+        45EDUARDO ALPIREZ                         ealpirez                    1          790       1                                1                        1FORD                           TF
+        46MARTIN FURLONG                           martin                     1         1095                     1                            1      1        ADMINISTRACION                 TF
+        47NERI GASTIAZORO                         nerig                       1         1025       1                                1                        1GOMERIA                        TF
+          PCS INVISIBLES                                                                           3     10     18         0       11        19     20      27Total invisibles                           47
+
+          NADIA SAIBENE                           nsaibene                    1                                                                              1SIXT                           SIXT
+          NADIA SAIBENE                           nsaibene                    1                                                                              1SIXT                           SIXT
+          JJ CRAVIOTO                             jcravioto                   1                                                                      1        SIXT                           SIXT
+          CARLOS GALTIERI                                                                                                                            1        SIXT                           SIXT
+          DIEGO CAMPOS                                                                                                                               1        SIXT                           SIXT
+
+
+
+
+          PCS SIXT                                                                                                                                   3       2Total sixt                                  5
+
+                                                                                            W2K     WXP    W7     O 2000    O 2003   O 2007    NB     DESKTOP
+          TOTAL GENERAL                                                                           14     59     49         1       46        72     39     106Total gral                                145
+            OBSERVACIONES
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+XP SP2
+
+
+
+
+
+ACCESS CLAM AV
+
+WINAMP
+
+
+ojo, con dominio
+
+
+
+
+
+
+64 BIT
+
+
+
+
+
+CLAM AV
+TUNEUP, MONITOR GRANDE
+SP2
+
+
+
+
+
+
+
+
+
+
+
+CORE2DUO
+
+TUVO OFFICE 2007SB
+1 USER / 2 PCS
+EX MOSCATO
+
+
+COMPARTE C/EST. ALONSO
+LENOVO N200
+
+64BIT
+
+
+VISTA
+192MB
+
+
+
+
+
+MAS UNA PC SIN MONITOR
+
+
+
+
+
+
+
+
+
+
+FORTIC, WG TASA, 1GB RAM,DG31PR, DISCO 150GB
+ WG TASA,2GB RAM,INTEL 1862, DICO 120GB
+FORTIC, WG TASA,1GB RAM, DG31PR,DISCO 149GB
+FORTIC, WG TASA,2 GB RAM, DCORE E6700,DISCO 150GB
+1GB RAM, DG31PR,DISCO 149GB
+1GB RAM, DG31PR,DISCO 149GB
+2GB RAM, CELERON DICO 40GB
+1GB RAM, G41M7, DISCO 320GB
+512 RAM, CELERON, DISCO 80GB
+LA Q USA HBM
+COMPRADA EN EEUU
+
+
+REPUESTOS FORD
+
+64BIT
+ACCESS, VISIO Y AUTOCAD
+
+
+
+
+
+
+
+
+
+
+Ex Toyota(la q no quizo Moliv)
+
+
+
+
+
+
+
+
+64BITS(DE DISEÑO)
+
+
+
+
+
+512RAM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
