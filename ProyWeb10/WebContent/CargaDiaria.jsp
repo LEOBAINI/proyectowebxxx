@@ -28,7 +28,17 @@ function Damehs(hs,fecha) {
 }
 
 </SCRIPT>
-
+<script> 
+    function irAconsultaHS(){ 
+    	response.sendRedirect("consultaHsTrabajadas.jsp");
+    } 
+   </script> 
+<script>
+function Envia(destino){
+	CargaDiaria.action=destino;
+	CargaDiaria.submit();
+}
+</script>
 
 
 <title>CARGA DIARIA DE DATOS</title>
@@ -38,6 +48,14 @@ function Damehs(hs,fecha) {
 <body >
 
 <%
+/*
+session.setAttribute("permiso","administrador");
+session.setAttribute("usuario","jorge");
+session.setAttribute("fechaCarga","2012-11-10");
+*/
+
+
+
 HttpSession sesion=request.getSession();
 if(sesion.equals(null)){
 	response.sendRedirect("index.jsp");
@@ -67,8 +85,20 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 		metodosSql metodos=new metodosSql();
 		
 		%>
+		<div align="right">
 		
+		
+		
+		<a>Ingrese aqui su consulta</a><br>
+		<a>Use el formato AAAA-MM-DD</a><br>
 		<input type="text" id="fech" name=fechaConsulta ><br>
+		<input type="button"  value="Check"  OnClick="Envia('consultaHsTrabajadas.jsp')">
+		
+		
+		
+		</div>
+		
+		
 		
 		
 		<%

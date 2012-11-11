@@ -1,5 +1,6 @@
 <%@page import="Base.metodosSql"%>
 <%@page import="java.util.StringTokenizer"%>
+<%@page import="java.util.ArrayList"%>
 <%@page session="true" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -48,8 +49,18 @@ int dni=Integer.parseInt(metodos.consultarUnaColumna("select dni from userlogin 
 
 String departamento=request.getParameter("departamento");
 String descripcion=request.getParameter("comentarios");
-																																						
-String periodoEstaAboCerr=metodos.consultarUnaColumna("select "+metodos.dameNroTeDoyMes(mes)+" from mesesestado	where usuario ='"+usuario+"' and anio = "+anio).get(0);
+ArrayList<String>periodo=metodos.consultarUnaColumna("select "+metodos.dameNroTeDoyMes(mes)+" from mesesestado	where usuario ='"+usuario+"' and anio = "+anio);																														
+String periodoEstaAboCerr=null;
+if(periodo.size()>0){
+	periodoEstaAboCerr=periodo.get(0).toString();
+	
+}else{
+	out.println("No tiene periodo creado en la tabla mesesestado solicitele a su administrador que lo abra");/*creale un periodo */
+}
+
+
+
+
 /*  ACA VALIDACION SI MES ESTA CERRADO, NO SE PUEDE AGREGAR...............
 
 preguntar en cuál tabla? 
