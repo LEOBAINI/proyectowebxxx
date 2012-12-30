@@ -20,7 +20,7 @@ if(session.equals(null)){
 
 
 String usuario=session.getAttribute("usuario").toString();
-session.getAttribute("usuario").toString();
+// linea al pedo session.getAttribute("usuario").toString();
 
 
 session.setAttribute("fechaCarga", request.getParameter("Fecha"));

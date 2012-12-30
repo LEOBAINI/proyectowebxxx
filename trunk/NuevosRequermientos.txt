@@ -1,0 +1,18 @@
+Paso a comentarear los puntos
+
+1) jsp para alta y modificación de los items indicados: Deptos, clientes, tareas, subtareas y dniPersonal (cambiale por favor este ultimo a Empleado o algo mas amistoso). Solo los socios.
+2) Para la búsqueda por filtro y la búsqueda sin filtro, que cada usuario tenga la posibilidad de modificar o eliminar registros propios de meses abiertos.
+Para esto se me ocurrió agregarle un botón o gif al lado de cada registro que abra un jsp solo con el registro y cuadros de texto rellenados con los campos. Así el usuario (cualquiera) modifica a gusto y le da a un botón update. Se me ocurre eso, capaz se te ocurra algo mejor a vos.
+3) Ambos listados (con filtro y sin filtro) deben tener un botón "guardar a mi pc" para guardar la vista como txt, sin recuadros ni nada. Solo los campitos, separados por ";". Dejale como primera linea la lista de nombres de campos. Así pueden llevarlo a Excel....ahora si sacas de la galera un "Export to XLS" sos un grosssso....
+4) Advertencia en carga de horas x superar n horas x día.
+Imaginate 3 escenarios posibles:
+  a) un empleado cualquiera carga por primera vez en el día un registro, le pone 8 horas. Por error, el segundo registro le pone 10 (en vez de 1).
+y suma 18hs. Que aparezca una advertencia porque supero en el día las 12 horas (ese 12 puede ser customizable). Solo advertencia. Si el empleado quiere ingresarlo debe poder.
+  b) un empleado cualquiera carga por primera vez en el día un registro, le pone 20 horas en vez de 2. que aparezca una advertencia indicando que  en el registro actual esta superando las 12 horas (mismo valor que punto a)
+  c) un empleado ingresa una tarea pero no sabe cuantas horas le va a demandar y le ingresa 0 horas. Luego va a editar el registro y le pone las horas correctas. Que aparezca advertencia indicando que puso 0 horas. Y permitir el ingreso.
+
+Con estos escenarios evitamos que el tipo cargue tres registros de 8 horas y que salte la banca :)
+También permitimos que anote tareas por adelantado, sin saber cuantas horas llevara la tarea.
+
+Como lo ves ?
+Abrazo.

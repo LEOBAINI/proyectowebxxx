@@ -1,3 +1,4 @@
+<%@page import="java.net.URLDecoder"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@page import="Abm.*" %>
@@ -17,25 +18,26 @@ if(session.getAttribute("solicitaAbm").equals("AbmCliente")){
 		Cliente cli=new Cliente(Integer.parseInt(request.getParameter("numeroCliente")),request.getParameter("razonSocial").toString());
 		if(admin.darDeAlta(cli, "proyectoweb", "cliente")==1){
 			%><script type="text/javascript">alert("Datos cargados con éxito!");
-			 document.location=("AbmCliente.jsp");
+			 document.location=("AbmCliente.jsp");//redireccion 
 			
 			</script><%
-		}else{
+		}		
+		
+		else{
 			
 			%><script type="text/javascript">alert("Hubo un problema, intente de nuevo por favor.");
 			
 			 document.location=("AbmCliente.jsp");
-			</script><%
-			
-			
-			
+			</script><%		
 			
 		}
 		
 		
 	}
+	//si viene de baja hacer..
 	if(session.getAttribute("accion").equals("Baja")){
 		out.println("baja");
+		out.println(URLDecoder.decode(request.getParameter("clientes"), "UTF-8"));
 		
 	}
 	if(session.getAttribute("accion").equals("Modificacion")){
