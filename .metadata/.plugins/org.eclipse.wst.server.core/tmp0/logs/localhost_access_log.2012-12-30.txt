@@ -1,0 +1,10 @@
+127.0.0.1 - - [30/Dec/2012:05:36:18 -0300] "GET / HTTP/1.1" 404 965
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:22 -0300] "GET /ProyWeb10/index.jsp HTTP/1.1" 200 991
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:22 -0300] "GET /ProyWeb10/style/style.css HTTP/1.1" 404 1040
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:26 -0300] "POST /ProyWeb10/Validacion.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:26 -0300] "GET /ProyWeb10/loginError.jsp HTTP/1.1" 200 451
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:28 -0300] "GET /ProyWeb10/index.jsp HTTP/1.1" 200 991
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:28 -0300] "GET /ProyWeb10/style/style.css HTTP/1.1" 404 1040
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:43 -0300] "POST /ProyWeb10/Validacion.jsp HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:44 -0300] "GET /ProyWeb10/MenuPpal.jsp HTTP/1.1" 200 896
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:46 -0300] "GET /ProyWeb10/CerrarSesion.jsp HTTP/1.1" 500 2938
