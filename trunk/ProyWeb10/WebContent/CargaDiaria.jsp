@@ -1,7 +1,8 @@
 <%@page import="Base.metodosSql"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
- <%@page import="java.util.*" %>
+ <%@page import="java.util.*," %>
+ <%@page import="javax.*," %>
  <%@page session="true" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -53,8 +54,6 @@ session.setAttribute("permiso","administrador");
 session.setAttribute("usuario","jorge");
 session.setAttribute("fechaCarga","2012-11-10");
 */
-
-
 
 HttpSession sesion=request.getSession();
 if(sesion.equals(null)){
