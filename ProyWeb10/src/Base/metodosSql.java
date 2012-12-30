@@ -3,14 +3,81 @@ package Base;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import java.util.Date;
 
 import java.util.Locale;
 
+import Abm.Persistente;
+
 public class metodosSql extends ConexionMySql {
 	
 	public metodosSql() {
+	}
+	
+	public  int insertarObjetoAlaBase(Persistente objeto,String base,String tabla){
+		int status=-1;
+		String atributos=formatearParaMySql(objeto.todosLosAtributos()).keySet().toString().replace('[', '(').replace("]", ")")+"values";
+		
+		String valores=formatearParaMySql(objeto.todosLosAtributos()).values().toString().replace('[', '(').replace("]", ");");
+		
+		String sentencia="insert into `"+base+"`.`"+tabla+"`"+atributos+valores;		
+		
+		status=insertarOmodif(sentencia);
+		
+		return status;
+	}
+	
+	public int borrarObjetoDeLaBase(Persistente objeto,String base,String tabla){
+		int status=0;
+		String sentencia="delete from `"+base+"`.`"+tabla+"` where `"+objeto.identificadorUnico()+"`='"+objeto.todosLosAtributos().get(objeto.identificadorUnico())+"';";
+		
+		status=insertarOmodif(sentencia);
+		
+		return status;
+		
+	}
+	
+    public int modificarObjetoDeLaBase(Persistente objeto,String base,String tabla){
+    	int status=-1;
+		status=borrarObjetoDeLaBase(objeto, base, tabla);
+		
+		status=status+insertarObjetoAlaBase(objeto, base, tabla);
+		
+		if(status==2){
+			status=1;
+		}
+		
+		
+		return status;
+		
+	}
+	
+	
+	
+	
+	private HashMap<Object,Object> formatearParaMySql(HashMap <Object,Object> mapa){
+		HashMap<Object,Object> aux=new HashMap<Object,Object>();
+		Object clave = null;
+		Object valor = null;
+		Iterator<Entry<Object, Object>> it=mapa.entrySet().iterator();
+		while (it.hasNext()) {
+			Entry<Object, Object> e = it.next();
+			clave=e.getKey();
+			valor=e.getValue();
+			clave="`"+clave+"`";
+			if(valor.getClass().getSimpleName().equals("String"))
+				
+				valor="'"+valor+"'";
+			aux.put(clave, valor);
+			}		
+		
+		return aux;
+		
 	}
 	
 	public String dameHorasTrabajadas(String fecha,String usuario){
@@ -71,6 +138,7 @@ public class metodosSql extends ConexionMySql {
 	public int insertarOmodif(String sentenciaSql) {
 		int status=0;
 		ConexionMySql con = new ConexionMySql();
+		System.out.println(sentenciaSql);
 
 		try {
 			con.conectar();
@@ -81,8 +149,12 @@ public class metodosSql extends ConexionMySql {
 
 		} catch (SQLException e) {
 			System.out.println("Error en insertarOmodificar");
-			System.out.println(e.getMessage());
+			if(e.getMessage().contains("Duplicate entry")){
+				System.out.println("Entrada duplicada cambie la clave primaria e intente de nuevo");
+			}
 			e.printStackTrace();
+			
+			
 			con.desconectar();
 			status=-1;
 		}
