@@ -45,7 +45,6 @@ if(session.getAttribute("solicitaAbm").equals("AbmCliente")){
 	
 	//si viene de baja hacer..
 	if(session.getAttribute("accion").equals("Baja")){
-		int statusBajaCliente=0;
 		AdministradorABM adminBaja=new AdministradorABM();
 		metodosSql metodos=new metodosSql();
 		out.println("baja");
@@ -54,21 +53,9 @@ if(session.getAttribute("solicitaAbm").equals("AbmCliente")){
 		String sentencia="Select idCliente from cliente where descripcion='"+cliente+"';";
 		int idCliente=Integer.parseInt(metodos.consultarUnaColumna(sentencia).get(0));
 		Cliente clienteDelete=new Cliente(idCliente,cliente);
-		statusBajaCliente= adminBaja.darDeBaja(clienteDelete,conexion.getBase(),"cliente");
-		if(statusBajaCliente==1){
-			%><script type="text/javascript">alert("Datos borrados con éxito!");
-			 document.location=("AbmCliente.jsp");//redireccion 
-			
-			</script><%
-			
-		}else{
-			%><script type="text/javascript">alert("Los datos no se borraron, intente de nuevo...");
-			 document.location=("AbmCliente.jsp");//redireccion 
-			
-			</script><%
-			
-		}
+		adminBaja.darDeBaja(clienteDelete,conexion.getBase(),"cliente");
 		
+		out.println("Cliente= "+cliente+"  idCliente="+idCliente);
 		
 		
 	}

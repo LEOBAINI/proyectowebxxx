@@ -56,7 +56,7 @@ if(session.getAttribute("solicitaAbm").equals("AbmCliente")){
 		Cliente clienteDelete=new Cliente(idCliente,cliente);
 		statusBajaCliente= adminBaja.darDeBaja(clienteDelete,conexion.getBase(),"cliente");
 		if(statusBajaCliente==1){
-			%><script type="text/javascript">alert("Datos borrados con éxito!");
+			%><script type="text/javascript">alert("Datos cargados con éxito!");
 			 document.location=("AbmCliente.jsp");//redireccion 
 			
 			</script><%
