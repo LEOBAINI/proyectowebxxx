@@ -8,3 +8,16 @@
 0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:43 -0300] "POST /ProyWeb10/Validacion.jsp HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:44 -0300] "GET /ProyWeb10/MenuPpal.jsp HTTP/1.1" 200 896
 0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:36:46 -0300] "GET /ProyWeb10/CerrarSesion.jsp HTTP/1.1" 500 2938
+127.0.0.1 - - [30/Dec/2012:05:49:46 -0300] "GET / HTTP/1.1" 404 965
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:49:50 -0300] "GET /ProyWeb10/MenuABM.jsp HTTP/1.1" 200 2483
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:49:50 -0300] "GET /ProyWeb10/style/style.css HTTP/1.1" 404 1040
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:49:54 -0300] "POST /ProyWeb10/AbmCliente.jsp HTTP/1.1" 200 1170
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:49:54 -0300] "GET /ProyWeb10/style/style.css HTTP/1.1" 404 1040
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:03 -0300] "POST /ProyWeb10/AbmCommitter.jsp HTTP/1.1" 200 433
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:08 -0300] "GET /ProyWeb10/AbmCliente.jsp HTTP/1.1" 200 1170
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:08 -0300] "GET /ProyWeb10/style/style.css HTTP/1.1" 404 1040
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:22 -0300] "GET /ProyWeb10/MenuPpal.jsp HTTP/1.1" 200 896
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:25 -0300] "GET /ProyWeb10/QueMesAbre.jsp HTTP/1.1" 200 1670
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:47 -0300] "GET /ProyWeb10/MenuPpal.jsp HTTP/1.1" 200 896
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:49 -0300] "GET /ProyWeb10/CerrarSesion.jsp HTTP/1.1" 200 991
+0:0:0:0:0:0:0:1 - - [30/Dec/2012:05:50:49 -0300] "GET /ProyWeb10/style/style.css HTTP/1.1" 404 1040

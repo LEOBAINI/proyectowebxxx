@@ -55,8 +55,7 @@ session.setAttribute("usuario","jorge");
 session.setAttribute("fechaCarga","2012-11-10");
 */
 
-
- HttpSession sesion=request.getSession();
+HttpSession sesion=request.getSession();
 if(sesion.equals(null)){
 	response.sendRedirect("index.jsp");
 }

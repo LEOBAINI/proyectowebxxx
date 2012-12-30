@@ -61,7 +61,7 @@
           <tags>persp.actionSet:org.eclipse.wst.server.ui.internal.webbrowser.actionSet</tags>
           <tags>persp.actionSet:org.eclipse.debug.ui.breakpointActionSet</tags>
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_mt9usFJYEeKwQKPxVs-dyg" selectedElement="_muHfslJYEeKwQKPxVs-dyg" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_mt9usFJYEeKwQKPxVs-dyg" selectedElement="_mt9usVJYEeKwQKPxVs-dyg" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_mt9usVJYEeKwQKPxVs-dyg" elementId="topLeft" containerData="2500" selectedElement="_mt9uslJYEeKwQKPxVs-dyg">
               <tags>newtablook</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_mt9uslJYEeKwQKPxVs-dyg" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_bJiCMFJYEeKwQKPxVs-dyg"/>
@@ -78,7 +78,7 @@
                   <children xsi:type="advanced:Placeholder" xmi:id="_muHft1JYEeKwQKPxVs-dyg" elementId="org.eclipse.mylyn.tasks.ui.views.tasks" ref="_bPrGcFJYEeKwQKPxVs-dyg"/>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_muHfuFJYEeKwQKPxVs-dyg" elementId="bottomRight" containerData="3000" selectedElement="_muHfu1JYEeKwQKPxVs-dyg">
+              <children xsi:type="basic:PartStack" xmi:id="_muHfuFJYEeKwQKPxVs-dyg" elementId="bottomRight" containerData="3000" selectedElement="_muHfwFJYEeKwQKPxVs-dyg">
                 <tags>newtablook</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_muHfuVJYEeKwQKPxVs-dyg" elementId="org.eclipse.ui.views.AllMarkersView" ref="_bPk_0FJYEeKwQKPxVs-dyg"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_muHfulJYEeKwQKPxVs-dyg" elementId="org.eclipse.ui.views.PropertySheet" ref="_bPlm4FJYEeKwQKPxVs-dyg"/>
@@ -120,7 +120,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_bJEvMFJYEeKwQKPxVs-dyg" elementId="org.eclipse.ui.editorss" selectedElement="_bJEvMVJYEeKwQKPxVs-dyg">
-      <children xsi:type="basic:PartStack" xmi:id="_bJEvMVJYEeKwQKPxVs-dyg" elementId="PartStack@160df2c" selectedElement="_iGv2gFJZEeKpLZkGnpxO0w">
+      <children xsi:type="basic:PartStack" xmi:id="_bJEvMVJYEeKwQKPxVs-dyg" elementId="PartStack@160df2c" selectedElement="_12RYUFJdEeKlPeI0kz4KuQ">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
@@ -136,6 +136,11 @@
         </children>
         <children xsi:type="basic:Part" xmi:id="_mzljoFJaEeKpLZkGnpxO0w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CargaDiaria.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui//icons//full/obj16/sourceEditor.gif" tooltip="ProyWeb10/WebContent/CargaDiaria.jsp" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/WebContent/CargaDiaria.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;11&quot; selectionOffset=&quot;1181&quot; selectionTopPixel=&quot;690&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_12RYUFJdEeKlPeI0kz4KuQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MenuABM.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui//icons//full/obj16/sourceEditor.gif" tooltip="ProyWeb10/WebContent/MenuABM.jsp" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/WebContent/MenuABM.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>
