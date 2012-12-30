@@ -10,11 +10,38 @@ public class ConexionMySql {
         private  Connection c;
         protected  Statement statemente;
         protected  ResultSet resulsete;
-        private static String cadena="jdbc:mysql://localhost/proyectoweb";
-        private static String driver="com.mysql.jdbc.Driver";
+        private  String base="proyectoweb";
+        private  String host="localhost";
+        private  String cadena="jdbc:mysql://"+host+"/"+base;
+       // private static String cadena="jdbc:mysql://localhost/pruebas";
+        private  String driver="com.mysql.jdbc.Driver";
        
         
-        public ConexionMySql(){
+        public String getBase() {
+			return base;
+		}
+
+
+
+		public void setBase(String base) {
+			this.base = base;
+		}
+
+
+
+		public String getHost() {
+			return host;
+		}
+
+
+
+		public void setHost(String host) {
+			this.host = host;
+		}
+
+
+
+		public ConexionMySql(){
         	
         }
         
