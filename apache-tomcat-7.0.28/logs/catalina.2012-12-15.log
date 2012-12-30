@@ -1,0 +1,118 @@
+dic 15, 2012 3:07:24 AM org.apache.catalina.core.AprLifecycleListener init
+Información: Cargada la biblioteca nativa APR de Apache Tomcat 1.1.24 con la versión APR 1.4.6.
+dic 15, 2012 3:07:24 AM org.apache.catalina.core.AprLifecycleListener init
+Información: Cargada la biblioteca nativa APR de Apache Tomcat 1.1.24 con la versión APR 1.4.6.
+dic 15, 2012 3:07:24 AM org.apache.catalina.core.AprLifecycleListener init
+Información: Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+dic 15, 2012 3:07:24 AM org.apache.catalina.core.AprLifecycleListener init
+Información: Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+dic 15, 2012 3:07:26 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+Información: OpenSSL inicializado correctamente (OpenSSL 1.0.1c 10 May 2012)
+dic 15, 2012 3:07:26 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+Información: OpenSSL inicializado correctamente (OpenSSL 1.0.1c 10 May 2012)
+dic 15, 2012 3:07:27 AM org.apache.coyote.AbstractProtocol init
+Información: Initializing ProtocolHandler ["http-apr-8080"]
+dic 15, 2012 3:07:27 AM org.apache.coyote.AbstractProtocol init
+Información: Initializing ProtocolHandler ["http-apr-8080"]
+dic 15, 2012 3:07:27 AM org.apache.coyote.AbstractProtocol init
+Grave: Failed to initialize end point associated with ProtocolHandler ["http-apr-8080"]
+java.lang.Exception: Ligado de conector falló: [730048] Sólo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)  
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:423)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:610)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:423)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:974)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:814)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:624)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:649)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:450)
+
+dic 15, 2012 3:07:27 AM org.apache.coyote.AbstractProtocol init
+Información: Initializing ProtocolHandler ["ajp-apr-8009"]
+dic 15, 2012 3:07:27 AM org.apache.catalina.core.StandardService initInternal
+Grave: No pude inicializar el conector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:814)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:624)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:649)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:281)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:450)
+Caused by: org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:976)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.lang.Exception: Ligado de conector falló: [730048] Sólo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)  
+	at org.apache.tomcat.util.net.AprEndpoint.bind(AprEndpoint.java:423)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:610)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:423)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:974)
+	... 13 more
+
+dic 15, 2012 3:07:27 AM org.apache.catalina.startup.Catalina load
+Información: Initialization processed in 3512 ms
+dic 15, 2012 3:07:27 AM org.apache.catalina.core.StandardService startInternal
+Información: Arrancando servicio Catalina
+dic 15, 2012 3:07:27 AM org.apache.catalina.core.StandardEngine startInternal
+Información: Starting Servlet Engine: Apache Tomcat/7.0.28
+dic 15, 2012 3:07:27 AM org.apache.catalina.startup.HostConfig deployWAR
+Información: Despliegue del archivo C:\apache-tomcat-7.0.28\webapps\ProyWeb10.war de la aplicación web
+dic 15, 2012 3:07:28 AM org.apache.catalina.startup.HostConfig deployWAR
+Información: Despliegue del archivo C:\apache-tomcat-7.0.28\webapps\SISTEMA_DE_MANEJO_HANDHELD.war de la aplicación web
+dic 15, 2012 3:07:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\docs de la aplicación web
+dic 15, 2012 3:07:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\examples de la aplicación web
+dic 15, 2012 3:07:29 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\host-manager de la aplicación web
+dic 15, 2012 3:07:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\manager de la aplicación web
+dic 15, 2012 3:07:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\ROOT de la aplicación web
+dic 15, 2012 3:07:30 AM org.apache.coyote.AbstractProtocol start
+Información: Starting ProtocolHandler ["http-apr-8080"]
+dic 15, 2012 3:07:30 AM org.apache.coyote.AbstractProtocol start
+Información: Starting ProtocolHandler ["ajp-apr-8009"]
+dic 15, 2012 3:07:30 AM org.apache.catalina.startup.Catalina start
+Información: Server startup in 3279 ms
+dic 15, 2012 3:08:27 AM org.apache.catalina.core.StandardServer await
+Información: Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+dic 15, 2012 3:08:27 AM org.apache.coyote.AbstractProtocol pause
+Información: Pausing ProtocolHandler ["http-apr-8080"]
+dic 15, 2012 3:08:27 AM org.apache.coyote.AbstractProtocol pause
+Información: Pausing ProtocolHandler ["ajp-apr-8009"]
+dic 15, 2012 3:08:27 AM org.apache.catalina.core.StandardService stopInternal
+Información: Parando servicio Catalina
+dic 15, 2012 3:08:27 AM org.apache.coyote.AbstractProtocol stop
+Información: Stopping ProtocolHandler ["http-apr-8080"]
+dic 15, 2012 3:08:27 AM org.apache.coyote.AbstractProtocol stop
+Información: Stopping ProtocolHandler ["ajp-apr-8009"]
+dic 15, 2012 3:08:27 AM org.apache.coyote.AbstractProtocol destroy
+Información: Destroying ProtocolHandler ["http-apr-8080"]
+dic 15, 2012 3:08:27 AM org.apache.coyote.AbstractProtocol destroy
+Información: Destroying ProtocolHandler ["ajp-apr-8009"]
+dic 15, 2012 3:08:31 AM org.apache.coyote.AbstractProtocol init
+Información: Initializing ProtocolHandler ["ajp-apr-8009"]
+dic 15, 2012 3:08:31 AM org.apache.catalina.startup.Catalina load
+Información: Initialization processed in 67425 ms
+dic 15, 2012 3:08:31 AM org.apache.catalina.core.StandardService startInternal
+Información: Arrancando servicio Catalina
+dic 15, 2012 3:08:31 AM org.apache.catalina.core.StandardEngine startInternal
+Información: Starting Servlet Engine: Apache Tomcat/7.0.28
+dic 15, 2012 3:08:31 AM org.apache.catalina.startup.HostConfig deployWAR
+Información: Despliegue del archivo C:\apache-tomcat-7.0.28\webapps\ProyWeb10.war de la aplicación web

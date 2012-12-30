@@ -1,0 +1,46 @@
+sep 28, 2012 1:15:35 AM org.apache.catalina.core.AprLifecycleListener init
+Información: Cargada la biblioteca nativa APR de Apache Tomcat 1.1.24 con la versión APR 1.4.6.
+sep 28, 2012 1:15:36 AM org.apache.catalina.core.AprLifecycleListener init
+Información: Capacidades APR: IPv6 [true], enviar fichero [true], aceptar filtros [false], aleatorio [true].
+sep 28, 2012 1:15:37 AM org.apache.catalina.core.AprLifecycleListener initializeSSL
+Información: OpenSSL inicializado correctamente (OpenSSL 1.0.1c 10 May 2012)
+sep 28, 2012 1:15:39 AM org.apache.coyote.AbstractProtocol init
+Información: Initializing ProtocolHandler ["http-apr-8080"]
+sep 28, 2012 1:15:39 AM org.apache.coyote.AbstractProtocol init
+Información: Initializing ProtocolHandler ["ajp-apr-8009"]
+sep 28, 2012 1:15:39 AM org.apache.catalina.startup.Catalina load
+Información: Initialization processed in 6267 ms
+sep 28, 2012 1:15:40 AM org.apache.catalina.core.StandardService startInternal
+Información: Arrancando servicio Catalina
+sep 28, 2012 1:15:40 AM org.apache.catalina.core.StandardEngine startInternal
+Información: Starting Servlet Engine: Apache Tomcat/7.0.28
+sep 28, 2012 1:15:40 AM org.apache.catalina.startup.HostConfig deployWAR
+Información: Despliegue del archivo C:\apache-tomcat-7.0.28\webapps\ProyWeb10.war de la aplicación web
+sep 28, 2012 1:15:42 AM org.apache.catalina.startup.HostConfig deployWAR
+Información: Despliegue del archivo C:\apache-tomcat-7.0.28\webapps\SISTEMA_DE_MANEJO_HANDHELD.war de la aplicación web
+sep 28, 2012 1:15:42 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\docs de la aplicación web
+sep 28, 2012 1:15:42 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\examples de la aplicación web
+sep 28, 2012 1:15:43 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\host-manager de la aplicación web
+sep 28, 2012 1:15:43 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\manager de la aplicación web
+sep 28, 2012 1:15:44 AM org.apache.catalina.startup.HostConfig deployDirectory
+Información: Despliegue del directorio C:\apache-tomcat-7.0.28\webapps\ROOT de la aplicación web
+sep 28, 2012 1:15:44 AM org.apache.coyote.AbstractProtocol start
+Información: Starting ProtocolHandler ["http-apr-8080"]
+sep 28, 2012 1:15:44 AM org.apache.coyote.AbstractProtocol start
+Información: Starting ProtocolHandler ["ajp-apr-8009"]
+sep 28, 2012 1:15:44 AM org.apache.catalina.startup.Catalina start
+Información: Server startup in 4314 ms
+sep 28, 2012 1:16:49 AM org.apache.coyote.AbstractProtocol pause
+Información: Pausing ProtocolHandler ["http-apr-8080"]
+sep 28, 2012 1:16:50 AM org.apache.coyote.AbstractProtocol pause
+Información: Pausing ProtocolHandler ["ajp-apr-8009"]
+sep 28, 2012 1:16:50 AM org.apache.catalina.core.StandardService stopInternal
+Información: Parando servicio Catalina
+sep 28, 2012 1:16:50 AM org.apache.coyote.AbstractProtocol stop
+Información: Stopping ProtocolHandler ["http-apr-8080"]
+sep 28, 2012 1:16:50 AM org.apache.coyote.AbstractProtocol stop
+Información: Stopping ProtocolHandler ["ajp-apr-8009"]
