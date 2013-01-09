@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="LectoEscrituraExcel.LeerHoja"/>
+<fullyQualifiedTypeName name="jxl.write.WritableCell"/>
+<fullyQualifiedTypeName name="jxl.Cell"/>
+<fullyQualifiedTypeName name="jxl.write.Label"/>
+<fullyQualifiedTypeName name="LectoEscrituraExcel.Escribir"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Base.metodosSql"/>
+<fullyQualifiedTypeName name="Excel.EscrituraExcel"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="jxl.write.DateTime"/>
+<fullyQualifiedTypeName name="java.sql.Time"/>
+<fullyQualifiedTypeName name="prueba.Main"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="sun.security.jca.GetInstance"/>
+<fullyQualifiedTypeName name="jxl.write.WritableCellFormat"/>
+<fullyQualifiedTypeName name="jxl.format.CellFormat"/>
+<fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+</qualifiedTypeNameHistroy>

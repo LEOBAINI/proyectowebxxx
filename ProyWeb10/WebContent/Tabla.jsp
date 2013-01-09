@@ -76,16 +76,34 @@ out.println("<br> Usted es "+tipoUsuario+" del sistema");
 ///sin filtro
 
 if(tipoUsuario.equals("Usuario")){
-matriz=metodos.consultar("SELECT idregistrogral,tarea,subtarea,descripcion,departamento,dnipersonal,cliente,horastrabajadas,tipohora,fecha,estado"+
+	/**
+	*Si es usuario solo podrá ver la tabla con sus propios datos
+	*
+	*
+	*/
+	
+	
+	
+String consultaUsuario="SELECT idregistrogral,tarea,subtarea,descripcion,departamento,dnipersonal,cliente,horastrabajadas,tipohora,fecha,estado"+
 		" FROM proyectoweb.REGISTROGRAL"+
-		" where dniPersonal= (select dni from proyectoweb.userlogin where usuario='"+usuario+"')");
+		" where dniPersonal= (select dni from proyectoweb.userlogin where usuario='"+usuario+"')";
+
+session.setAttribute("consultaUsuario", consultaUsuario);
+
+
+matriz=metodos.consultar(consultaUsuario);
 
 		
 }else{
-	matriz=metodos.consultar("SELECT idregistrogral,tarea,subtarea,descripcion,departamento,"+
+	
+	String consultaAdministrador="SELECT idregistrogral,tarea,subtarea,descripcion,departamento,"+
 			"usuario,cliente,horastrabajadas,tipohora,fecha,estado "+
 			" FROM proyectoweb.registrogral r,proyectoweb.userlogin u "+
-			"where u.dni= r.dnipersonal order by usuario;" );
+			"where u.dni= r.dnipersonal order by usuario;";
+			
+session.setAttribute("consultaAdministrador", consultaAdministrador);
+			
+	matriz=metodos.consultar(consultaAdministrador);
 	
 	
 	
@@ -106,6 +124,12 @@ if(tipoUsuario.equals("Usuario")){
 }else{
 	hsTotal=metodos.consultarUnaColumna("SELECT SUM(horastrabajadas) FROM REGISTROGRAL r,userlogin u where u.dni= r.dnipersonal").get(0);
 }
+
+
+//descargar sin filtro
+session.setAttribute("matrizNoFiltrada", matriz);
+out.println("<a href='Descarga.jsp'>Descargar en formato Excel</a>");
+
 }
 
 
@@ -152,26 +176,31 @@ else{// Si la opcion en el request, viene con filtrado.
 
 	if(tipoUsuario.equals("Usuario")){//solo mostrara los registros donde aparezca su dni
 	try{
-	matriz2=metodos.consultar("Select idregistrogral,tarea,subtarea,descripcion,departamento,usuario,cliente,horastrabajadas,tipohora,fecha"+
+	String consultaUsuarioFiltro="Select idregistrogral,tarea,subtarea,descripcion,departamento,usuario,cliente,horastrabajadas,tipohora,fecha,estado"+
 			" from proyectoweb.registrogral r,proyectoweb.personal p,proyectoweb.userlogin u "+
 			" where "+filtro+"='"+criterio+"' and "+
 			" fecha >='"+desde+"' and "+
 			" fecha <='"+hasta+"'and "+
 			" r.dnipersonal= p.dni and "+
 			"p.dni= "+dniUser+" and "+
-			"u.dni= "+dniUser);
+			"u.dni= "+dniUser;
+	session.setAttribute("consultaUsuarioFiltro", consultaUsuarioFiltro);
+	matriz2=metodos.consultar(consultaUsuarioFiltro);
+	
 	}catch(Exception e){
 		response.sendRedirect("index.jsp");
 	}
 	
 	}else{//si es administrador vera todos los registros no importa el usuario
-		matriz2=metodos.consultar("Select idregistrogral,tarea,subtarea,descripcion,departamento,usuario,cliente,horastrabajadas,tipohora,fecha"+
+		String consultaAdministradorFiltro="Select idregistrogral,tarea,subtarea,descripcion,departamento,usuario,cliente,horastrabajadas,tipohora,fecha,estado"+
 	" from proyectoweb.registrogral r,proyectoweb.personal p,proyectoweb.userlogin u "+
 				" where "+filtro+"='"+criterio+"' and "+
 				" fecha >='"+desde+"' and "+
 				" fecha <='"+hasta+"'and "+
 				" r.dnipersonal=p.dni and "+
-				"u.dni=p.dni");//duda con esta....
+				"u.dni=p.dni";
+		session.setAttribute("consultaAdministradorFiltro",consultaAdministradorFiltro);
+		matriz2=metodos.consultar(consultaAdministradorFiltro);//duda con esta....
 	}
 	
 	
@@ -179,7 +208,7 @@ else{// Si la opcion en el request, viene con filtrado.
 //MOSTRANDO POR PANTALLA///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	for(int i=0;i<matriz2.size();i++){
 		out.println("<tr>");
-		for(int j=0;j<10;j++){//8 son la cantidad de elementos del ancho
+		for(int j=0;j<11;j++){//8 son la cantidad de elementos del ancho
 			
 			out.println("<td>"+matriz2.get(i).get(j)+"</td>");
 			
@@ -223,7 +252,14 @@ else{// Si la opcion en el request, viene con filtrado.
 						" r.dnipersonal=p.dni and "+
 						"u.dni=p.dni").get(0);
 	}
+
+
+
+	session.setAttribute("matrizFiltrada", matriz2);
+
+	out.println("<a href='Descarga.jsp'>Descargar en formato Excel</a>");
 }
+
 
 %>
 
@@ -233,6 +269,8 @@ else{// Si la opcion en el request, viene con filtrado.
 El total de horas para esta consulta es de <%=hsTotal %><br>
 
 <a href="MenuPpal.jsp">Volver a menú</a><br><br>
+
+
 
 
 </body>
