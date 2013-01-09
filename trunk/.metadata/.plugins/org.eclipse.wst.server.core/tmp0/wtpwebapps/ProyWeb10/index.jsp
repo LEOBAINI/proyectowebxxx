@@ -22,7 +22,8 @@
  
 <h2 align="center" ><u>Por favor, ingrese su nombre de usuario y contraseña.</u>                            v10<br></h2>
 
-<form action="Validacion.jsp" method="post">
+ <form action="Validacion.jsp" method="post">
+
 		<table border="3" align="left">
 			<tr>
 				<td>Usuario</td>
@@ -34,6 +35,7 @@
 			</tr>
 		</table>
 		<br><input type="submit"/>
+		
 	</form>
 
 </body>

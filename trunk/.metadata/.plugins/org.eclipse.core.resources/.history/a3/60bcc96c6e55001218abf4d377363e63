@@ -1,0 +1,86 @@
+package LectoEscrituraExcel;
+
+
+import java.io.File;
+import jxl.Cell;
+import jxl.Sheet;
+import jxl.Workbook;
+
+
+public class LeerHoja {
+
+
+    public int numD; // Declaración del numero de valores a leer
+    public int[] valores; // Vector de valores leídos
+    
+    
+    public LeerHoja(){
+    	
+    	
+    }
+    
+    
+    public void LeerHojaExcel(){
+    
+    try{
+
+                //—————————————————————————–
+    			String ruta="D:\\Desktop\\pruebaLectura.xls";
+    			
+                Workbook libro = Workbook.getWorkbook(new File(ruta));
+
+                // Para obtener el libro .xls
+
+                Sheet hoja1 = libro.getSheet(0); 
+
+                //Para obtener la hoja de la primera posición del libro
+                //—————————————————————————–
+                //Se crea la celda que se va a leer de la hoja posición (0, 0)
+
+                Cell a1 = hoja1.getCell(0,0); 
+
+                //Se le pasa el valor a un String para capturar la información
+
+                String Stringnum_T = a1.getContents(); 
+
+                //Se convierte el String en un numero para obtener el valor
+
+                numD = Integer.parseInt(Stringnum_T); 
+
+                //——————————————————————————
+
+                //La lectura del vector de datos se hace de la siguiente manera
+
+                
+                valores =new int [numD]; // Inicializa la variable
+
+
+
+                for(int r=0; r<numD; r++){ //For de R
+
+
+
+                        Cell indRLeeAux =hoja1.getCell(1+r, 1);//Lee los indices
+
+                
+                        // (1+r, 1) porque se va a recorrer la fila en la lectura
+
+    
+                        String IndiRLee = indRLeeAux.getContents();
+
+                        System.out.println(IndiRLee); // Imprimimos en consola
+
+                    
+                        valores[r]=Integer.parseInt(IndiRLee); //Se convierte el
+
+                    //valor de String a Entero para almacenarlo en el array 
+
+                }// Fin For de R
+    
+    }catch(Exception eP){
+            
+            eP.printStackTrace();
+       }//fin catch
+    } // Fin del método
+} // Fin de la clase
+

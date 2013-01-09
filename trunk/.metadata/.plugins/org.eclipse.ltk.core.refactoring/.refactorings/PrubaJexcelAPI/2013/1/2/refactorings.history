@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;LectoEscrituraExcel.LeerHoja&apos; to &apos;LecturaExcel&apos;&#x0D;&#x0A;- Original project: &apos;PrubaJexcelAPI&apos;&#x0D;&#x0A;- Original element: &apos;LectoEscrituraExcel.LeerHoja&apos;&#x0D;&#x0A;- Renamed element: &apos;LectoEscrituraExcel.LecturaExcel&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LeerHoja&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;LectoEscrituraExcel{LeerHoja.java[LeerHoja" matchStrategy="1" name="LecturaExcel" qualified="false" references="true" similarDeclarations="false" stamp="1357613694534" textual="false" version="1.0"/>
+</session>

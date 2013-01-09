@@ -37,7 +37,7 @@
 				 <a href="Tabla.jsp">Ver Datos sin filtro (solo de su perfil si es usuario)</a><br><br>
 				 <a href="FiltroConsulta.jsp">Ver Datos con filtro (solo de su perfil si es usuario)</a><br><br>				
 				 <a href="CierreGlobal.jsp">Ver cierres globales anual</a><br><br>
-				 <a href="MenuABM.jsp">Altas,Bajas, modificaciónes</a><br><br>
+				<!--   <a href="MenuABM.jsp">Altas,Bajas, modificaciónes</a><br><br> -->
 				 <a href="CerrarSesion.jsp">Cerrar sesión</a><br><br>
 				  <%
 				}
