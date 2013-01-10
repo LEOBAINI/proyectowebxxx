@@ -8,7 +8,7 @@ Para esto se me ocurrió agregarle un botón o gif al lado de cada registro que ab
 
 
 
-3) Ambos listados (con filtro y sin filtro) deben tener un botón "guardar a mi pc" para guardar la vista como txt, sin recuadros ni nada. Solo los campitos, separados por ";". Dejale como primera linea la lista de nombres de campos. Así pueden llevarlo a Excel....ahora si sacas de la galera un "Export to XLS" sos un grosssso....
+Cumplido: Ambos listados (con filtro y sin filtro) deben tener un botón "guardar a mi pc" para guardar la vista como txt, 	  sin recuadros ni nada. Solo los campitos, separados por ";". Dejale como primera linea la lista de nombres de 	  campos. Así pueden llevarlo a Excel....ahora si sacas de la galera un "Export to XLS" sos un grosssso....
 
 
 
