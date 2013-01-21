@@ -13,14 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="" key="selection"/>
+		<item value="Tabla" key="selection"/>
 		<list key="findhistory">
+			<item value="tabla"/>
+			<item value="subtarea"/>
+			<item value="form"/>
+			<item value="envia"/>
+			<item value="input"/>
+			<item value="horas"/>
 			<item value="regdetareas"/>
 			<item value="metodos"/>
-			<item value="Sum"/>
-			<item value="sum"/>
-			<item value="regDetareas"/>
-			<item value="regGral"/>
 		</list>
 		<list key="replacehistory">
 		</list>

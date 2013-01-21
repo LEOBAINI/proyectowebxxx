@@ -7,6 +7,13 @@
 <html>
 <head>
 
+<script>
+function Envia(destino){
+	tabla.action=destino;
+	tabla.submit();
+}
+</script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Tabla maestra</title>
 </head>
@@ -41,6 +48,7 @@ if(session.getAttribute("usuario")==null){
 </thead>
 <tbody>
 <%
+
 
 String hsTotal;
 metodosSql metodos=new metodosSql();
@@ -263,8 +271,16 @@ else{// Si la opcion en el request, viene con filtrado.
 
 %>
 
+		
+
 </tbody>
 </table>
+<form action="EdicionRegistroGral.jsp" name="tabla">
+<a>Ingrese aqui nro de registro para editar contenido</a><br>
+		
+		<input type="text" id="nroRegistro" name=nroRegistro ><br>
+		<input type="button"  value="Editar"  OnClick="Envia('EdicionRegistroGral.jsp')">
+	</form>
 
 El total de horas para esta consulta es de <%=hsTotal %><br>
 

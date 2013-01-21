@@ -14,6 +14,23 @@
     	return form_element;
     } 
    </script> 
+   
+ <SCRIPT>
+ function compruebaExcesoDeHoras(hs,maxHs){
+	 if(hs>=maxhs){
+		 if(confirm('ha excedido el límite de '+maxhs+' confirma?')){
+			 alert('Confirmó');
+		 }else{
+			 alert('No confirmó');
+		 }
+		 
+	 }
+	 
+ }
+ </SCRIPT>
+ 
+  <SCRIPT>
+
 
 <SCRIPT>
 
@@ -49,11 +66,17 @@ function Envia(destino){
 <body >
 
 <%
-/*
-session.setAttribute("permiso","administrador");
-session.setAttribute("usuario","jorge");
-session.setAttribute("fechaCarga","2012-11-10");
-*/
+
+
+
+/*session.setAttribute("permiso","administrador");
+session.setAttribute("usuario","leandro");
+session.setAttribute("fechaCarga","2012-11-10");*/
+
+
+
+
+
 
 HttpSession sesion=request.getSession();
 if(sesion.equals(null)){
@@ -68,6 +91,7 @@ out.println("<body bgcolor=\"#F2EFFB\">"); %>
 	<form name="CargaDiaria" action="Hacerupdate.jsp" method="post">
 
 <%
+
 String usuario=session.getAttribute("usuario").toString(); 
 String permiso=session.getAttribute("permiso").toString();
 String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha del menu, la de hoy por defecto.
@@ -92,6 +116,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 		<a>Use el formato AAAA-MM-DD</a><br>
 		<input type="text" id="fech" name=fechaConsulta ><br>
 		<input type="button"  value="Check"  OnClick="Envia('consultaHsTrabajadas.jsp')">
+		
 		
 		
 		
@@ -248,7 +273,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 	
 			
 
-	
+		
 		<input type="submit" value="Aceptar"/><br><br>
 		<a href="MenuPpal.jsp" >Volver a menu</a>
 		

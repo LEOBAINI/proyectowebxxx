@@ -51,6 +51,10 @@ if(session.getAttribute("solicitaAbm").equals("AbmCliente")){
 		out.println("baja");
 		
 		String cliente=URLDecoder.decode(request.getParameter("clientes"), "UTF-8");
+		
+		
+		
+		
 		String sentencia="Select idCliente from cliente where descripcion='"+cliente+"';";
 		int idCliente=Integer.parseInt(metodos.consultarUnaColumna(sentencia).get(0));
 		Cliente clienteDelete=new Cliente(idCliente,cliente);
