@@ -1,6 +1,8 @@
 <%@page import="Base.metodosSql"%>
 <%@page import="java.util.StringTokenizer"%>
 <%@page import="java.util.ArrayList"%>
+<%@page import="java.util.*"%>
+<%@page import="java.net.URLDecoder"%>
 <%@page session="true" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -19,6 +21,7 @@ if(session.equals(null)){
 
 
 
+
 String usuario=session.getAttribute("usuario").toString();
 // linea al pedo session.getAttribute("usuario").toString();
 
@@ -26,15 +29,21 @@ String usuario=session.getAttribute("usuario").toString();
 session.setAttribute("fechaCarga", request.getParameter("Fecha"));
 session.setAttribute("usuario", usuario);
 metodosSql metodos=new metodosSql();
-String cliente=request.getParameter("cliente");
+//String clienteSindeco=request.getParameter("cliente");
+String cliente=URLDecoder.decode(request.getParameter("cliente"), "UTF-8");//request.getParameter("cliente");
 
 int dia;
 
  
 //String mes=request.getParameter("mes");
+int idRegistroGral=0;
+if(session.getAttribute("nroRegistro")!=null){
+	idRegistroGral=Integer.parseInt(session.getAttribute("nroRegistro").toString());
+}
+
 String tipohora=request.getParameter("tipohora");	
-String tarea=request.getParameter("tarea");
-String subtarea=request.getParameter("subtarea");
+String tarea=URLDecoder.decode(request.getParameter("tarea"), "UTF-8");//request.getParameter("tarea");
+String subtarea=URLDecoder.decode(request.getParameter("subtarea"), "UTF-8");//request.getParameter("subtarea");
 double horas=Double.parseDouble(request.getParameter("horas"));
 
 
@@ -77,11 +86,34 @@ SI ESTO DÁ ABIERTO PUEDE INSERTAR SINO MENSAJITO...
 */
 int status=0;
 
-if(!periodoEstaAboCerr.equals("CERRADO")){
+if(!periodoEstaAboCerr.equals("CERRADO")){//si el periodo esta abierto
+	
+	
+	if(session.getAttribute("esEdicion")!=null){//si es para editar entre aquí
+		if(session.getAttribute("esEdicion").equals("SI")){
+			//solo puede actualizar sus propios registros...
+			
+		status=metodos.insertarOmodif("UPDATE `proyectoweb`.`registrogral` SET `tarea`='"+tarea+"', `subtarea`='"+subtarea+"', `descripcion`='"+descripcion+"', `departamento`='"+departamento+"',"+
+				"`cliente`='"+cliente+"', `horastrabajadas`="+horas+", `tipohora`='"+tipohora+"', `fecha`='"+fecha+"' WHERE `idregistroGral`='"+idRegistroGral+"' and dniPersonal= '"+dni+"';");
+
+
+			session.setAttribute("esEdicion", "NO");
+			if(status==1){
+				out.println("Datos cargados con éxito");
+				
+			}else{
+				out.println("Hubo un problema, no se cargaron los datos");
+			}
+			
+			
+		}
+	}
+	else{// si es un registro nuevo entre aquí
 	 status=metodos.insertarOmodif("insert INTO registroGral "+
 			"(`tarea`, `subtarea`, `descripcion`, `departamento`, `dniPersonal`, `cliente`, `horastrabajadas`,`tipoHora` ,`fecha`)"+
 			"VALUES ('"+tarea+"', '"+subtarea+"', '"+descripcion+"', '"+departamento+"', "+dni+", '"+cliente+"', "+horas+", '"+tipohora+"', '"+fecha+"')");
 	 metodos.abrirMes(usuario, mes, anio);
+	}
 	
 }
 else{
@@ -97,7 +129,7 @@ if(status==1){
 	
 	
 	session.setAttribute("status", "Ok");
-	response.sendRedirect("CargaDiaria.jsp");
+	
 	//out.println("Los datos se han guardado correctamente");
 	
 }else{ 
@@ -112,9 +144,11 @@ if(status==1){
 	
 }
 
+
 %>
 
 <a href="MenuPpal.jsp">Volver a menú</a><br><br>
+<a href="Tabla.jsp">Volver a tabla</a><br><br>
 <a href="CargaDiaria.jsp">Volver a cargar datos</a>
 
 </body>

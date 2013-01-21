@@ -1,3 +1,5 @@
 INDEX VERSION 1.126
+D:\Desktop\Claudio\proyectowebxxx\trunk\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4066132656.index
+\ProyWeb10\src
 D:\Desktop\Claudio\proyectowebxxx\trunk\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3805739230.index
 \ProyWeb10\src
