@@ -1,0 +1,158 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@page import="Base.metodosSql,java.util.*"%>
+    <%@page session="true" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script type="text/javascript">
+function rellenar(){
+	alert("hola");
+	var indice = document.modificacion.clientes.selectedIndex;
+
+
+	var valor = document.modificacion.clientes[indice].value; 
+	
+	document.modificacion.nuevoValor.value='valor';
+	
+}</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Abm de Clientes</title>
+<link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<body bgcolor="#E6E6E6">
+<a>Bienvenido al Alta,Baja,Modificación de Clientes.</a><br>
+
+
+
+<%
+session.setAttribute("solicitaAbm", "AbmCliente");
+
+
+String accion=request.getParameter("accion");
+session.setAttribute("accion", accion);
+
+out.println("Que hago? :"+ accion);
+
+
+
+//request.getParameter("abm"); es el que hay que usar para saber accion a tomar
+
+
+metodosSql metodos=new metodosSql();
+int nroClienteSugerido=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idCliente) FROM proyectoweb.cliente;").get(0));
+nroClienteSugerido++;
+if(accion.equals("Alta"))
+{ out.println("Eligió dar de alta un nuevo cliente, complete los campos sin dejar espacios. ");
+%>
+
+<form name="alta" action="AbmCommitter.jsp" method="post">
+		<table border="3" align="left">
+			<tr>
+				<td>Razón Social</td>
+				<td><input name="razonSocial" value="" /></td>
+			</tr>
+			<tr>
+				<td>Cliente Nro°</td>
+				<td><input name="numeroCliente" value="<%=nroClienteSugerido%>" /></td>
+			</tr>
+			
+		</table>
+
+		<br><br><br><br><input type="submit" value="Crear Cliente"/>
+	</form>
+	<br><br><br>
+	<a>Se sugiere que no modifique el numero de cliente, a menos que lo necesite, pero si lo hace, coloque un número mayor al sugerido. </a>
+<% 
+}
+else if(accion.equals("Baja"))
+{
+
+	%><form name="baja" action="AbmCommitter.jsp" method="post"><%
+	out.println("Eligio dar de baja un cliente, seleccione de la lista desplegable.<br><br>");
+
+
+ 
+
+metodosSql metodos2=new metodosSql();
+ArrayList<String>clientes=metodos2.consultarUnaColumna("select descripcion from cliente where Inhabilitado='NO'");
+out.println("Clientes");
+
+out.println(" <select name=" + " clientes " + ">");
+
+for (int i = 0; i < clientes.size(); i++)
+	//encodeURIComponent(unencoded) para javascript
+	//java.net.URLEncoder.encode(usuarios.get(i), "UTF-8")
+	out.println(" <option value=" + java.net.URLEncoder.encode(clientes.get(i), "UTF-8") + ">"
+			+ clientes.get(i) + "</option>");
+
+out.println("</select>");
+out.println("<br>");
+
+
+%><input type="submit" value="Borrar!"></input>
+
+</form><%
+}
+else if(accion.equals("Modificacion"))
+{
+
+	%><form name="modificacion" action="AbmCommitter.jsp" method="post"><%
+	out.println("Eligio modificar un cliente, seleccione de la lista desplegable.<br><br>");
+
+metodosSql metodos3=new metodosSql();
+ArrayList<String>clientes=metodos3.consultarUnaColumna("select descripcion from cliente where Inhabilitado='NO'");
+out.println("Clientes");
+
+out.println(" <select name=" + " clientes " + "onChange='rellenar()'>");
+
+for (int i = 0; i < clientes.size(); i++)
+	//encodeURIComponent(unencoded) para javascript
+	//java.net.URLEncoder.encode(usuarios.get(i), "UTF-8")
+	out.println(" <option value=" + java.net.URLEncoder.encode(clientes.get(i), "UTF-8") + ">"
+			+ clientes.get(i) + "</option>");
+
+out.println("</select>");
+out.println("<br>");
+
+
+
+
+%>
+<br><input type="text" name="nuevoVAlor" ><a>Ingrese aquí el nuevo nombre del cliente</a>
+<br>
+<input type="submit" value="Borrar!"></input>
+
+</form><%
+}
+
+
+
+
+
+
+
+else if(session.getAttribute("accion").equals("Modificacion"))
+{out.println("Eligio modificar un usuario, seleccione de la lista desplegable.");
+
+
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+%>
+
+<br>
+<a href="MenuABM.jsp" >Volver a ABM</a><br>
+<a href="MenuPpal.jsp" >Volver a menu principal</a>
+</body>
+</html>

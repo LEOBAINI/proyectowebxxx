@@ -55,8 +55,8 @@ int mes=Integer.parseInt(fechaCompleta.nextToken("-"));
 
 
 int dni=Integer.parseInt(metodos.consultarUnaColumna("select dni from userlogin where usuario = '"+ session.getAttribute("usuario").toString()+"'").get(0));
-
-String departamento=request.getParameter("departamento");
+//String cliente=URLDecoder.decode(request.getParameter("clientes"), "UTF-8");
+String departamento=URLDecoder.decode(request.getParameter("departamento"),"UTF-8");
 String descripcion=request.getParameter("comentarios");
 ArrayList<String>periodo=metodos.consultarUnaColumna("select "+metodos.dameNroTeDoyMes(mes)+" from mesesestado	where usuario ='"+usuario+"' and anio = "+anio);																														
 String periodoEstaAboCerr=null;

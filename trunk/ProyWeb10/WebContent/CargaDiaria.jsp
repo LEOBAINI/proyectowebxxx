@@ -167,7 +167,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 
 			for (int i = 0; i < array2.size(); i++)
 
-				out.println(" <option value=" + array2.get(i) + ">"
+				out.println(" <option value=" + java.net.URLEncoder.encode(array2.get(i), "UTF-8") + ">"
 						+ array2.get(i) + "</option>");
 
 			out.println("</select>");
@@ -202,7 +202,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 
 			for (int i = 0; i < array6.size(); i++)
 
-				out.println(" <option value=" + array6.get(i) + ">"
+				out.println(" <option value=" + java.net.URLEncoder.encode(array6.get(i), "UTF-8") + ">"
 						+ array6.get(i) + "</option>");
 
 			out.println("</select>");
@@ -220,7 +220,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 
 			for (int i = 0; i < array7.size(); i++)
 
-				out.println(" <option value=" + array7.get(i) + ">"
+				out.println(" <option value=" + java.net.URLEncoder.encode(array7.get(i), "UTF-8") + ">"
 						+ array7.get(i) + "</option>");
 
 			out.println("</select>");
@@ -238,7 +238,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 
 			for (int i = 0; i < array8.size(); i++)
 
-				out.println(" <option value=" + array8.get(i) + ">"
+				out.println(" <option value=" + java.net.URLEncoder.encode(array8.get(i), "UTF-8") + ">"
 						+ array8.get(i) + "</option>");
 
 			out.println("</select>");

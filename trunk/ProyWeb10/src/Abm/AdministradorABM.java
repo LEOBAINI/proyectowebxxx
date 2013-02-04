@@ -21,6 +21,16 @@ public class AdministradorABM {
 		
 		
 	}
+	
+	public int InHabilitar(Persistente objeto,String base,String tabla){
+		metodosSql metodos=new metodosSql();
+		
+		return metodos.inHabilitarObjetoDeLaBase(objeto, base, tabla);
+		
+		
+	}
+	
+	
 	public int modificar(Persistente objeto,String base,String tabla){
 		metodosSql metodos=new metodosSql();
 		return metodos.modificarObjetoDeLaBase(objeto, base, tabla);
