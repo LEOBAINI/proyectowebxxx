@@ -41,10 +41,34 @@ public class metodosSql extends ConexionMySql {
 		return status;
 		
 	}
+	/**
+	 *INHABILITAR COLOCA EN EL CAMPO INHABILITADO DE LA BASE DE DATOS UN 'SI', DE ESTA MANERA SE HACE INVISIBLE AL USUARIO 
+	 *
+	 */
+	
+	public int inHabilitarObjetoDeLaBase(Persistente objeto,String base,String tabla){
+		int status=0;
+		//UPDATE `proyectoweb`.`cliente` SET `Inhabilitado`='si' WHERE `idCliente`='1';
+		String sentencia="UPDATE `"+base+"`.`"+tabla+"` SET `Inhabilitado`='SI' where `"+objeto.identificadorUnico()+"`='"+objeto.todosLosAtributos().get(objeto.identificadorUnico())+"';";
+		
+		status=insertarOmodif(sentencia);
+		
+		return status;
+		
+	}
+	
+	/**
+	 * Modificar llama a inhabilitarObjetoDeLaBase coloca un 'SI' en el campo 'InHAbilitado' de la base de datos del objeto a modificar
+	 * y luego crea un nuevo objeto quedando visible sólo éste último creado por el usuario.
+	 * @param objeto (debe heredar de persistente)
+	 * @param base
+	 * @param tabla
+	 * @return
+	 */
 	
     public int modificarObjetoDeLaBase(Persistente objeto,String base,String tabla){
     	int status=-1;
-		status=borrarObjetoDeLaBase(objeto, base, tabla);
+		status=inHabilitarObjetoDeLaBase(objeto, base, tabla);
 		
 		status=status+insertarObjetoAlaBase(objeto, base, tabla);
 		

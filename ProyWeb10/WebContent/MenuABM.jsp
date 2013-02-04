@@ -14,9 +14,10 @@
 <%
 
 
-session.setAttribute("permiso", "administrador");//borrar esta linea para asegurar seguridad 
+/*session.setAttribute("permiso", "administrador");//borrar esta linea para asegurar seguridad 
 session.setAttribute("usuario", "jorge");
-session.setAttribute("contrasenia", "jorge");%>
+session.setAttribute("contrasenia", "jorge");
+*/%>
 
 
 
@@ -28,7 +29,8 @@ session.setAttribute("contrasenia", "jorge");%>
 
 function dirige(){
 	
-elijaAbm();
+
+document.menuABM.accion.value=elijaAbm();
 
 var indice = document.forms.menuABM.objetos.selectedIndex;
 
@@ -38,6 +40,8 @@ var valor = document.forms.menuABM.objetos[indice].value;
 
 
 if(valor=="cliente"){
+	
+	
 	document.forms.menuABM.action="AbmCliente.jsp";
 	
 } if(valor=="tarea"){
@@ -88,7 +92,9 @@ function getRadioButtonSelectedValue(ctrl)
 
  <form name="menuABM"  method="post">
  
- <input name="abm" value="Alta" type="radio">Alta<br> 
+ <input type="hidden" name="accion">
+ 
+ <input name="abm" value="Alta" type="radio" CHECKED>Alta<br> 
 
  <input name="abm" value="Baja" type="radio">Baja<br>
  
@@ -97,10 +103,10 @@ function getRadioButtonSelectedValue(ctrl)
  <div align="left"><a>Elija el objeto en cuestión</a> <br> <br>  <select
 			name="objetos">
 			<option value="cliente">Cliente</option>
-			<option value="departamento">Departamento</option>
+			<!--  <option value="departamento">Departamento</option>
 			<option value="subtarea">Subtarea</option>
 			<option value="tarea">Tarea</option>
-			<option value="usuario">Usuario</option>
+			<option value="usuario">Usuario</option>-->
 			
 
 		</select></div>
