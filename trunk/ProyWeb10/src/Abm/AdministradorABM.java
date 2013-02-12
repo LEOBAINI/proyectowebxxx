@@ -36,6 +36,19 @@ public class AdministradorABM {
 		return metodos.modificarObjetoDeLaBase(objeto, base, tabla);
 		
 	}
+	/**
+	 * Actualiza las dependencias de las subtareas con respecto a las tareas modificadas
+	 * @param vieja (Tarea)
+	 * @param nueva (Tarea)
+	 * @return Devuelve 1 si se ejecutó correctamente sino -1.
+	 */
+	
+	public int reasignarSubtareas(Tarea vieja,Tarea nueva){
+		metodosSql metodos=new metodosSql();
+		int idViejo=vieja.getIdTarea();
+		int idNuevo=nueva.getIdTarea();
+		return metodos.insertarOmodif("UPDATE `proyectoweb`.`subtarea` SET `TareaPadre`="+idNuevo+" WHERE `TareaPadre`='"+idViejo+"';");
+	}
 	
 	
 }

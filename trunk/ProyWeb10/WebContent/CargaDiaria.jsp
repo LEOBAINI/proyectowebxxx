@@ -159,7 +159,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 			out.println("Cliente.....");
 			ArrayList<String> array2 = new ArrayList<String>();
 			
-			array2=metodos.consultarUnaColumna("SELECT descripcion from cliente");
+			array2=metodos.consultarUnaColumna("SELECT descripcion from cliente where Inhabilitado= 'NO';");
 			array2.add(0,"");
 			
 

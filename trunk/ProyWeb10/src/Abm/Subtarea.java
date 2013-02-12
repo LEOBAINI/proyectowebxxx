@@ -23,6 +23,20 @@ public  class Subtarea extends Persistente {
 		
 		this.todosLosAtributos=atributos;
 	}
+	public Subtarea(int idSubtarea, String descripcion) {
+		super();
+		this.idSubtarea = idSubtarea;
+		
+		this.descripcion = descripcion;
+		
+        HashMap<Object, Object> atributos=new HashMap<Object,Object>();
+		
+		atributos.put("idSubtarea", getIdSubtarea());
+	
+		atributos.put("descripcion",getDescripcion());	
+		
+		this.todosLosAtributos=atributos;
+	}
 
 	
 	public int getIdSubtarea() {

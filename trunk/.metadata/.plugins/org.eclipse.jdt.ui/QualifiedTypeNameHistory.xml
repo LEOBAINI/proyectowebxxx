@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="jxl.write.Label"/>
 <fullyQualifiedTypeName name="LectoEscrituraExcel.Escribir"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="Base.metodosSql"/>
 <fullyQualifiedTypeName name="Excel.EscrituraExcel"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="jxl.write.DateTime"/>
@@ -18,4 +17,5 @@
 <fullyQualifiedTypeName name="jxl.write.WritableCellFormat"/>
 <fullyQualifiedTypeName name="jxl.format.CellFormat"/>
 <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+<fullyQualifiedTypeName name="Base.metodosSql"/>
 </qualifiedTypeNameHistroy>
