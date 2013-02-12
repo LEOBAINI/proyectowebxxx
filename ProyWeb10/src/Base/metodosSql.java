@@ -14,6 +14,7 @@ import java.util.Locale;
 
 import Abm.Persistente;
 
+@SuppressWarnings("unused")
 public class metodosSql extends ConexionMySql {
 	
 	public metodosSql() {

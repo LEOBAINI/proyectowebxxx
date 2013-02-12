@@ -103,9 +103,11 @@ function getRadioButtonSelectedValue(ctrl)
  <div align="left"><a>Elija el objeto en cuestión</a> <br> <br>  <select
 			name="objetos">
 			<option value="cliente">Cliente</option>
-			<!--  <option value="departamento">Departamento</option>
-			<option value="subtarea">Subtarea</option>
 			<option value="tarea">Tarea</option>
+			<option value="subtarea">Subtarea</option>
+			<!--  <option value="departamento">Departamento</option>
+			
+			
 			<option value="usuario">Usuario</option>-->
 			
 

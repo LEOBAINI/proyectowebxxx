@@ -138,6 +138,262 @@ if(session.getAttribute("solicitaAbm").equals("AbmCliente")){//inicio si viene d
 	
 	
 }//fin si viene de abmcliente
+else if(session.getAttribute("solicitaAbm").equals("AbmTarea")){//inicio si viene de AbmTarea
+	//out.println("vino de AbmTarea");
+	
+	if(session.getAttribute("accion").equals("Alta")){//inicio si es para alta tarea
+		
+		Tarea tar=new Tarea(Integer.parseInt(request.getParameter("numeroTarea")),request.getParameter("tarea").toString().toUpperCase());
+		//usando upper case por primera vez en el proyecto
+		if(admin.darDeAlta(tar, "proyectoweb", "tarea")==1){
+			%><script type="text/javascript">alert("Datos cargados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+		}		
+		
+		else{
+			
+			%><script type="text/javascript">alert("Hubo un problema, intente de nuevo por favor.");
+			
+			 document.location=("MenuABM.jsp");
+			</script><%		
+			
+		}
+		
+		
+	}//fin si es para alta cliente
+	
+	
+	
+	
+	
+	//si viene de baja hacer..
+	if(session.getAttribute("accion").equals("Baja")){//inicio si es para baja cliente
+		int statusBajaCliente=0;
+		AdministradorABM adminBaja=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		out.println("baja");
+		
+		String tarea=URLDecoder.decode(request.getParameter("tareas"), "UTF-8");
+		
+		
+		
+		
+		String sentencia="Select idTarea from tarea where descripcion='"+tarea+"' and inHabilitado='NO';";
+		int idTarea=Integer.parseInt(metodos.consultarUnaColumna(sentencia).get(0));
+		Tarea tareaDelete=new Tarea(idTarea, tarea);
+		
+		statusBajaCliente= adminBaja.InHabilitar(tareaDelete,conexion.getBase(),"tarea");
+		if(statusBajaCliente==1){
+			%><script type="text/javascript">alert("Datos borrados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se borraron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+		
+		
+		
+	}//fin si es para baja tarea	
+	
+	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion tarea
+		out.println("modificacion");
+	try{
+		int statusModifTarea=0;
+		AdministradorABM adminModif=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		
+		
+		
+		String tarea=URLDecoder.decode(request.getParameter("tareas"), "UTF-8");
+		
+		
+		
+		
+		
+		int idTarea=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idTarea) FROM proyectoweb.tarea;").get(0));
+		idTarea++;
+		int idTareaDel=Integer.parseInt(metodos.consultarUnaColumna("SELECT idTarea FROM proyectoweb.tarea where descripcion= '"+tarea+"' and inHabilitado='NO';").get(0));
+		String nuevaDescripcionTarea=request.getParameter("nuevoValor");
+		Tarea nuevaTarea=new Tarea(idTarea,nuevaDescripcionTarea);
+		Tarea tareaDelete=new Tarea(idTareaDel,tarea);
+		
+		statusModifTarea= adminModif.InHabilitar(tareaDelete,conexion.getBase(),"tarea");
+		statusModifTarea=statusModifTarea+adminModif.darDeAlta(nuevaTarea,conexion.getBase(), "tarea");
+		statusModifTarea=statusModifTarea+adminModif.reasignarSubtareas(tareaDelete, nuevaTarea);
+		
+		if(statusModifTarea==3){
+			%><script type="text/javascript">alert("Datos modificados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se modificaron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+	}catch(Exception e){
+		out.println("Error, compruebe los datos suministrados e intente de nuevo... :\n "+e.getMessage());
+		
+		%><a href="MenuABM.jsp" >Volver a ABM</a><%
+		
+	}
+	
+	
+	
+	
+	
+	
+		
+	}//fin si es para modificacion de tarea
+	
+	
+	
+	
+	
+	
+}//fin si viene de abmtarea
+
+else if(session.getAttribute("solicitaAbm").equals("AbmSubTarea")){//inicio si viene de AbmSubTarea
+	//out.println("vino de AbmSubTarea");
+	
+	if(session.getAttribute("accion").equals("Alta")){//inicio si es para alta Subtarea
+		metodosSql metodos=new metodosSql();
+		
+		String nombreTareaPadre=request.getParameter("tareas").toString();
+		String idTarPadre=metodos.consultarUnaColumna("SELECT idTarea FROM proyectoweb.tarea where descripcion='"+nombreTareaPadre+"';").get(0);
+		int idTareaPadre=Integer.parseInt(idTarPadre);
+	
+		Subtarea subTar=new Subtarea(Integer.parseInt(request.getParameter("numeroSubTarea")),idTareaPadre,  request.getParameter("subTarea").toString().toUpperCase());
+		//usando upper case por primera vez en el proyecto
+		if(admin.darDeAlta(subTar, "proyectoweb", "subtarea")==1){
+			%><script type="text/javascript">alert("Datos cargados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+		}		
+		
+		else{
+			
+			%><script type="text/javascript">alert("Hubo un problema, intente de nuevo por favor.");
+			
+			 document.location=("MenuABM.jsp");
+			</script><%		
+			
+		}
+		
+		
+	}//fin si es para alta tarea
+	
+	
+	
+	
+	
+	//si viene de baja hacer..
+	if(session.getAttribute("accion").equals("Baja")){//inicio si es para baja subtarea
+		int statusBajaSubtarea=0;
+		AdministradorABM adminBaja=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		out.println("baja");
+		
+		String subTarea=URLDecoder.decode(request.getParameter("subtareas"), "UTF-8");
+		
+		
+		
+		
+		String sentencia="Select idsubTarea from subtarea where descripcion='"+subTarea+"' and inHabilitado='NO';";
+		int idSubTarea=Integer.parseInt(metodos.consultarUnaColumna(sentencia).get(0));
+		Subtarea subTareaDelete=new Subtarea(idSubTarea, subTarea);
+		
+		statusBajaSubtarea= adminBaja.InHabilitar(subTareaDelete,conexion.getBase(),"subtarea");
+		if(statusBajaSubtarea==1){
+			%><script type="text/javascript">alert("Datos borrados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se borraron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+		
+		
+		
+	}//fin si es para baja subtarea	
+	
+	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion tarea
+		out.println("modificacion");
+	try{
+		int statusModifTarea=0;
+		AdministradorABM adminModif=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		
+		
+		
+		String tarea=URLDecoder.decode(request.getParameter("tareas"), "UTF-8");
+		
+		
+		
+		
+		
+		int idTarea=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idTarea) FROM proyectoweb.tarea;").get(0));
+		idTarea++;
+		int idTareaDel=Integer.parseInt(metodos.consultarUnaColumna("SELECT idTarea FROM proyectoweb.tarea where descripcion= '"+tarea+"' and inHabilitado='NO';").get(0));
+		String nuevaDescripcionTarea=request.getParameter("nuevoValor");
+		Tarea nuevaTarea=new Tarea(idTarea,nuevaDescripcionTarea);
+		Tarea tareaDelete=new Tarea(idTareaDel,tarea);
+		
+		statusModifTarea= adminModif.InHabilitar(tareaDelete,conexion.getBase(),"tarea");
+		statusModifTarea=statusModifTarea+adminModif.darDeAlta(nuevaTarea,conexion.getBase(), "tarea");
+		statusModifTarea=statusModifTarea+adminModif.reasignarSubtareas(tareaDelete, nuevaTarea);
+		
+		if(statusModifTarea==3){
+			%><script type="text/javascript">alert("Datos modificados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se modificaron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+	}catch(Exception e){
+		out.println("Error, compruebe los datos suministrados e intente de nuevo... :\n "+e.getMessage());
+		
+		%><a href="MenuABM.jsp" >Volver a ABM</a><%
+		
+	}
+	
+	
+	
+	
+	
+	
+		
+	}//fin si es para modificacion de subtarea
+	
+	
+	
+	
+	
+	
+}//fin si viene de abmSubtarea
 
 
 

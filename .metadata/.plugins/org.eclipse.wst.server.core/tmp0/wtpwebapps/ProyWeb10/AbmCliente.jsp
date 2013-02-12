@@ -27,11 +27,11 @@ function rellenar(){
 
 
 <%
-session.setAttribute("solicitaAbm", "AbmCliente");
+session.setAttribute("solicitaAbm", "AbmCliente");//ÉSTE SETEO ESTARÁ EN TODOS LOS JSP DE ABM PARA INDICAR AL ABMCOMMITER LA ACCION CORRESPONDIENTE
 
 
-String accion=request.getParameter("accion");
-session.setAttribute("accion", accion);
+String accion=request.getParameter("accion");//ÉSTE ACCION VIENE CARGADO DE MENUABM CON (Alta,Baja o Modificación)
+session.setAttribute("accion", accion);//ACA ACCION PASA A SER UN ATRIBUTO DE SESION PARA SER LLEVADO AL ABMCOMMITER
 
 out.println("Que hago? :"+ accion);
 
