@@ -337,7 +337,6 @@ else if(session.getAttribute("solicitaAbm").equals("AbmSubTarea")){//inicio si v
 	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion de subtarea
 		out.println("modificacion");
 	try{
-		//´+´+
 		int statusModifSubTarea=0;
 		AdministradorABM adminModif=new AdministradorABM();
 		metodosSql metodos=new metodosSql();
