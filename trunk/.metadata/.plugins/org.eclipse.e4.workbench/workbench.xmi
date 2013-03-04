@@ -165,7 +165,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_bY1sNlOaEeK7obMSXYKpQg" elementId="org.eclipse.ui.navigator.ProjectExplorer" toBeRendered="false" ref="_bJiCMFJYEeKwQKPxVs-dyg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_bY1sN1OaEeK7obMSXYKpQg" elementId="org.eclipse.jdt.junit.ResultView" toBeRendered="false" ref="_bYvlkVOaEeK7obMSXYKpQg"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_bY1sOFOaEeK7obMSXYKpQg" containerData="7996" selectedElement="_bY1sQlOaEeK7obMSXYKpQg">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_bY1sOFOaEeK7obMSXYKpQg" containerData="7996" selectedElement="_bY1sOVOaEeK7obMSXYKpQg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_bY1sOVOaEeK7obMSXYKpQg" containerData="7500" selectedElement="_bY1sOlOaEeK7obMSXYKpQg" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_bY1sOlOaEeK7obMSXYKpQg" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_bJEvMFJYEeKwQKPxVs-dyg"/>
                 <children xsi:type="basic:PartSashContainer" xmi:id="_bY1sO1OaEeK7obMSXYKpQg" containerData="2500">
@@ -313,7 +313,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_3ruC4G48EeKtwaCOlzY3hw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="AbmCommitter.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui//icons//full/obj16/sourceEditor.gif" tooltip="ProyWeb10/WebContent/AbmCommitter.jsp" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/WebContent/AbmCommitter.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;168&quot; selectionTopPixel=&quot;5733&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/WebContent/AbmCommitter.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;10527&quot; selectionTopPixel=&quot;5013&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>
