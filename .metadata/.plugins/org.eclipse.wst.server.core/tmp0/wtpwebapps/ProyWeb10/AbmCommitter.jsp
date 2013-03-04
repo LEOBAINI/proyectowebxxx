@@ -334,33 +334,36 @@ else if(session.getAttribute("solicitaAbm").equals("AbmSubTarea")){//inicio si v
 		
 	}//fin si es para baja subtarea	
 	
-	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion tarea
+	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion de subtarea
 		out.println("modificacion");
 	try{
-		int statusModifTarea=0;
+		int statusModifSubTarea=0;
 		AdministradorABM adminModif=new AdministradorABM();
 		metodosSql metodos=new metodosSql();
 		
 		
 		
-		String tarea=URLDecoder.decode(request.getParameter("tareas"), "UTF-8");
+		String subTarea=URLDecoder.decode(request.getParameter("subTareas"), "UTF-8");
 		
 		
 		
 		
 		
-		int idTarea=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idTarea) FROM proyectoweb.tarea;").get(0));
-		idTarea++;
-		int idTareaDel=Integer.parseInt(metodos.consultarUnaColumna("SELECT idTarea FROM proyectoweb.tarea where descripcion= '"+tarea+"' and inHabilitado='NO';").get(0));
+		int idSubTarea=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idsubTarea) FROM proyectoweb.subtarea;").get(0));
+		idSubTarea++;
+		int idSubTareaDel=Integer.parseInt(metodos.consultarUnaColumna("SELECT idSubTarea FROM proyectoweb.subtarea where descripcion= '"+subTarea+"' and inHabilitado='NO';").get(0));
+		int idtareaPadre=Integer.parseInt(metodos.consultarUnaColumna("SELECT tareaPadre FROM proyectoweb.subtarea where idSubTarea= '"+idSubTareaDel+"' ;").get(0));
 		String nuevaDescripcionTarea=request.getParameter("nuevoValor");
-		Tarea nuevaTarea=new Tarea(idTarea,nuevaDescripcionTarea);
-		Tarea tareaDelete=new Tarea(idTareaDel,tarea);
+		Subtarea nuevaSubTarea=new Subtarea(idSubTarea,nuevaDescripcionTarea);
+		Subtarea subTareaDelete=new Subtarea(idSubTareaDel,subTarea);
+		subTareaDelete.setTareaPadre(idtareaPadre);
+		nuevaSubTarea.setTareaPadre(subTareaDelete.getTareaPadre());
 		
-		statusModifTarea= adminModif.InHabilitar(tareaDelete,conexion.getBase(),"tarea");
-		statusModifTarea=statusModifTarea+adminModif.darDeAlta(nuevaTarea,conexion.getBase(), "tarea");
-		statusModifTarea=statusModifTarea+adminModif.reasignarSubtareas(tareaDelete, nuevaTarea);
+		statusModifSubTarea= adminModif.InHabilitar(subTareaDelete,conexion.getBase(),"subtarea");
+		statusModifSubTarea=statusModifSubTarea+adminModif.darDeAlta(nuevaSubTarea,conexion.getBase(), "subtarea");
+		statusModifSubTarea=statusModifSubTarea+adminModif.InHabilitar(subTareaDelete, conexion.getBase(), "subtarea");
 		
-		if(statusModifTarea==3){
+		if(statusModifSubTarea==3){
 			%><script type="text/javascript">alert("Datos modificados con éxito!");
 			 document.location=("MenuABM.jsp");//redireccion 
 			
