@@ -352,16 +352,13 @@ else if(session.getAttribute("solicitaAbm").equals("AbmSubTarea")){//inicio si v
 		int idSubTarea=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idsubTarea) FROM proyectoweb.subtarea;").get(0));
 		idSubTarea++;
 		int idSubTareaDel=Integer.parseInt(metodos.consultarUnaColumna("SELECT idSubTarea FROM proyectoweb.subtarea where descripcion= '"+subTarea+"' and inHabilitado='NO';").get(0));
-		int idtareaPadre=Integer.parseInt(metodos.consultarUnaColumna("SELECT tareaPadre FROM proyectoweb.subtarea where idSubTarea= '"+idSubTareaDel+"' ;").get(0));
 		String nuevaDescripcionTarea=request.getParameter("nuevoValor");
 		Subtarea nuevaSubTarea=new Subtarea(idSubTarea,nuevaDescripcionTarea);
 		Subtarea subTareaDelete=new Subtarea(idSubTareaDel,subTarea);
-		subTareaDelete.setTareaPadre(idtareaPadre);
-		nuevaSubTarea.setTareaPadre(subTareaDelete.getTareaPadre());
 		
 		statusModifSubTarea= adminModif.InHabilitar(subTareaDelete,conexion.getBase(),"subtarea");
 		statusModifSubTarea=statusModifSubTarea+adminModif.darDeAlta(nuevaSubTarea,conexion.getBase(), "subtarea");
-		statusModifSubTarea=statusModifSubTarea+adminModif.InHabilitar(subTareaDelete, conexion.getBase(), "subtarea");
+		statusModifSubTarea=statusModifSubTarea+adminModif.reasignarSubtareas(tareaDelete, nuevaTarea);
 		
 		if(statusModifSubTarea==3){
 			%><script type="text/javascript">alert("Datos modificados con éxito!");
