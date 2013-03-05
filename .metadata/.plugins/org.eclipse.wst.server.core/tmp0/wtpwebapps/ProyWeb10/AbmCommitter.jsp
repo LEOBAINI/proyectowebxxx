@@ -337,6 +337,7 @@ else if(session.getAttribute("solicitaAbm").equals("AbmSubTarea")){//inicio si v
 	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion de subtarea
 		out.println("modificacion");
 	try{
+		//´+´+
 		int statusModifSubTarea=0;
 		AdministradorABM adminModif=new AdministradorABM();
 		metodosSql metodos=new metodosSql();
@@ -398,6 +399,131 @@ else if(session.getAttribute("solicitaAbm").equals("AbmSubTarea")){//inicio si v
 	
 }//fin si viene de abmSubtarea
 
+else if(session.getAttribute("solicitaAbm").equals("AbmDepto")){//inicio si viene de AbmDepartamento
+	//out.println("vino de AbmDepartamento");
+	
+	if(session.getAttribute("accion").equals("Alta")){//inicio si es para alta Departamento
+		
+		Departamento _depto=new Departamento(Integer.parseInt(request.getParameter("numerodepartamento")),request.getParameter("departamento").toString().toUpperCase());
+		//usando upper case por primera vez en el proyecto
+		if(admin.darDeAlta(_depto, "proyectoweb", "Departamento")==1){
+			%><script type="text/javascript">alert("Datos cargados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+		}		
+		
+		else{
+			
+			%><script type="text/javascript">alert("Hubo un problema, intente de nuevo por favor.");
+			
+			 document.location=("MenuABM.jsp");
+			</script><%		
+			
+		}
+		
+		
+	}//fin si es para alta Departamento
+	
+	
+	
+	
+	
+	//si viene de baja hacer..
+	if(session.getAttribute("accion").equals("Baja")){//inicio si es para baja Departamento
+		int statusBajaCliente=0;
+		AdministradorABM adminBaja=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		out.println("baja");
+		
+		String Departamento=URLDecoder.decode(request.getParameter("departamentos"), "UTF-8");
+		
+		
+		
+		
+		String sentencia="Select idDepartamento from Departamento where descripcion='"+Departamento+"' and inHabilitado='NO';";
+		int idDepartamento=Integer.parseInt(metodos.consultarUnaColumna(sentencia).get(0));
+		Departamento DepartamentoDelete=new Departamento(idDepartamento, Departamento);
+		
+		statusBajaCliente= adminBaja.InHabilitar(DepartamentoDelete,conexion.getBase(),"Departamento");
+		if(statusBajaCliente==1){
+			%><script type="text/javascript">alert("Datos borrados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se borraron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+		
+		
+		
+	}//fin si es para baja Departamento	
+	
+	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion Departamento
+		out.println("modificacion");
+	try{
+		int statusModifDepartamento=0;
+		AdministradorABM adminModif=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		
+		
+		
+		String Departamento=URLDecoder.decode(request.getParameter("departamentos"), "UTF-8");
+		
+		
+		
+		
+		
+		int idDepartamento=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idDepartamento) FROM proyectoweb.Departamento;").get(0));
+		idDepartamento++;
+		int idDepartamentoDel=Integer.parseInt(metodos.consultarUnaColumna("SELECT idDepartamento FROM proyectoweb.Departamento where descripcion= '"+Departamento+"' and inHabilitado='NO';").get(0));
+		String nuevaDescripcionDepartamento=request.getParameter("nuevoValor");
+		Departamento nuevaDepartamento=new Departamento(idDepartamento,nuevaDescripcionDepartamento);
+		Departamento DepartamentoDelete=new Departamento(idDepartamentoDel,Departamento);
+		
+		statusModifDepartamento= adminModif.InHabilitar(DepartamentoDelete,conexion.getBase(),"Departamento");
+		statusModifDepartamento=statusModifDepartamento+adminModif.darDeAlta(nuevaDepartamento,conexion.getBase(), "Departamento");
+		
+		
+		if(statusModifDepartamento==2){
+			%><script type="text/javascript">alert("Datos modificados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se modificaron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+	}catch(Exception e){
+		out.println("Error, compruebe los datos suministrados e intente de nuevo... :\n "+e.getMessage());
+		
+		%><a href="MenuABM.jsp" >Volver a ABM</a><%
+		
+	}
+	
+	
+	
+	
+	
+	
+		
+	}//fin si es para modificacion de Departamento
+	
+	
+	
+	
+	
+	
+}//fin si viene de abmDepartamento
 
 
 
