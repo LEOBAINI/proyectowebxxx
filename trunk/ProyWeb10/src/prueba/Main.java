@@ -67,14 +67,19 @@ public class Main {
 		Subtarea sub=new Subtarea(15, 1, "uyftydty");
 		
 		ejecutarPruebasABM(sub, base, tabla);*/
-		EscrituraExcel esc=new EscrituraExcel();
+		/*EscrituraExcel esc=new EscrituraExcel();
 		String usuario="pepi";
 		
 		ArrayList<ArrayList<String>>matriz=metodos.consultar("SELECT * FROM userLogin");
 		String rutaDestino="d:\\DescargasProyWeb10\\Excel\\";
 		
 		
-		esc.crearExcelDesdeMatriz(matriz, rutaDestino, usuario);
+		esc.crearExcelDesdeMatriz(matriz, rutaDestino, usuario);*/
+		
+		
+		Usuario user=new Usuario("lbadmin", "lbadmin", "administrador", 28737, 28737, "Senior", "Baini", "Leonardo", "Quint 3383", "4745-7242", 1);
+		AdministradorABM admin=new AdministradorABM();
+		System.out.println(admin.darDeAltaUsuario(user));
 		
 		
 		

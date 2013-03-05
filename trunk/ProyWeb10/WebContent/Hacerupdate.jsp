@@ -99,10 +99,17 @@ if(!periodoEstaAboCerr.equals("CERRADO")){//si el periodo esta abierto
 
 			session.setAttribute("esEdicion", "NO");
 			if(status==1){
-				out.println("Datos cargados con éxito");
+				%><script type="text/javascript">alert("Datos cargados con éxito!");
+				 document.location=("CargaDiaria.jsp");//redireccion 
+				
+				</script><%
 				
 			}else{
-				out.println("Hubo un problema, no se cargaron los datos");
+				%><script type="text/javascript">alert("Hubo un problema, no se cargaron los datos");
+				 document.location=("CargaDiaria.jsp");//redireccion 
+				
+				</script><%
+				
 			}
 			
 			
@@ -130,7 +137,10 @@ if(status==1){
 	
 	session.setAttribute("status", "Ok");
 	
-	//out.println("Los datos se han guardado correctamente");
+	%><script type="text/javascript">alert("Datos cargados con éxito!");
+	 document.location=("CargaDiaria.jsp");//redireccion 
+	
+	</script><%
 	
 }else{ 
 	out.println("Hay un problema!!!, los datos pudieron no haberse guardado, si el problema persiste contacte al administrador<br><br><br><br>");
