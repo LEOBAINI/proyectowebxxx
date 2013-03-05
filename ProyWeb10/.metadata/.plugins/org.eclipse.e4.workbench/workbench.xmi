@@ -61,6 +61,7 @@
           <tags>persp.actionSet:org.eclipse.wst.server.ui.internal.webbrowser.actionSet</tags>
           <tags>persp.actionSet:org.eclipse.debug.ui.breakpointActionSet</tags>
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
+          <tags>persp.actionSet:org.eclipse.wb.core.ui.actionset</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_LRvDEVJYEeKeHOl6-nF-aA" selectedElement="_LRvDF1JYEeKeHOl6-nF-aA" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_LRvDElJYEeKeHOl6-nF-aA" elementId="topLeft" toBeRendered="false" containerData="2500">
               <tags>newtablook</tags>
@@ -370,6 +371,8 @@
     <bindings xmi:id="_J5sSEVJYEeKeHOl6-nF-aA" keySequence="CTRL+ARROW_LEFT" command="_J3CmslJYEeKeHOl6-nF-aA"/>
     <bindings xmi:id="_J5s5IlJYEeKeHOl6-nF-aA" keySequence="CTRL+D" command="_J3IGTVJYEeKeHOl6-nF-aA"/>
     <bindings xmi:id="_J5s5I1JYEeKeHOl6-nF-aA" keySequence="CTRL+ARROW_RIGHT" command="_J3UTh1JYEeKeHOl6-nF-aA"/>
+    <bindings xmi:id="_69K3w4VBEeKhS_oO8oQViA" keySequence="F12" command="_67-k9oVBEeKhS_oO8oQViA"/>
+    <bindings xmi:id="_69K3xYVBEeKhS_oO8oQViA" keySequence="SHIFT+F12" command="_67-k8oVBEeKhS_oO8oQViA"/>
   </bindingTables>
   <bindingTables xmi:id="_J4le01JYEeKeHOl6-nF-aA" elementId="org.eclipse.ui.contexts.window" bindingContext="_J1KXalJYEeKeHOl6-nF-aA">
     <bindings xmi:id="_J4mF4FJYEeKeHOl6-nF-aA" keySequence="CTRL+SHIFT+NUMPAD_MULTIPLY" command="_J2-8WlJYEeKeHOl6-nF-aA"/>
@@ -755,6 +758,19 @@
   <bindingTables xmi:id="_LBlHMFJYEeKeHOl6-nF-aA" bindingContext="_LBkgIVJYEeKeHOl6-nF-aA"/>
   <bindingTables xmi:id="_LBluQVJYEeKeHOl6-nF-aA" bindingContext="_LBluQFJYEeKeHOl6-nF-aA"/>
   <bindingTables xmi:id="_LBm8YFJYEeKeHOl6-nF-aA" bindingContext="_LBmVUFJYEeKeHOl6-nF-aA"/>
+  <bindingTables xmi:id="_69BGwIVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.java.editorScope" bindingContext="_68IV8IVBEeKhS_oO8oQViA">
+    <bindings xmi:id="_69K3wIVBEeKhS_oO8oQViA" keySequence="ALT+CTRL+A" command="_67-k9YVBEeKhS_oO8oQViA"/>
+    <bindings xmi:id="_69UBsIVBEeKhS_oO8oQViA" keySequence="CTRL+SHIFT+A" command="_67-k9YVBEeKhS_oO8oQViA"/>
+  </bindingTables>
+  <bindingTables xmi:id="_69K3wYVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.xml.editorScope" bindingContext="_68IV8YVBEeKhS_oO8oQViA">
+    <bindings xmi:id="_69K3woVBEeKhS_oO8oQViA" keySequence="ALT+CTRL+A" command="_67-k9YVBEeKhS_oO8oQViA"/>
+    <bindings xmi:id="_69K3xIVBEeKhS_oO8oQViA" keySequence="F12" command="_67-k84VBEeKhS_oO8oQViA"/>
+    <bindings xmi:id="_69UBsYVBEeKhS_oO8oQViA" keySequence="CTRL+SHIFT+A" command="_67-k9YVBEeKhS_oO8oQViA"/>
+  </bindingTables>
+  <bindingTables xmi:id="_7CrC0YVBEeKhS_oO8oQViA" bindingContext="_7CrC0IVBEeKhS_oO8oQViA"/>
+  <bindingTables xmi:id="_7CrC04VBEeKhS_oO8oQViA" bindingContext="_7CrC0oVBEeKhS_oO8oQViA"/>
+  <bindingTables xmi:id="_7CrC1YVBEeKhS_oO8oQViA" bindingContext="_7CrC1IVBEeKhS_oO8oQViA"/>
+  <bindingTables xmi:id="_7S4pEYVBEeKhS_oO8oQViA" bindingContext="_7S4pEIVBEeKhS_oO8oQViA"/>
   <rootContext xmi:id="_J1KXaVJYEeKeHOl6-nF-aA" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_J1KXalJYEeKeHOl6-nF-aA" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Windows" description="A window is open">
       <children xmi:id="_J1KXa1JYEeKeHOl6-nF-aA" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="%bindingcontext.name.bindingView"/>
@@ -785,6 +801,7 @@
           <children xmi:id="_J3n1g1JYEeKeHOl6-nF-aA" elementId="org.eclipse.wst.xml.comments" name="XML Source Comments" description="XML Source Comments"/>
           <children xmi:id="_J3ockVJYEeKeHOl6-nF-aA" elementId="org.eclipse.wst.css.core.csssource" name="Editing CSS Source" description="Editing CSS Source"/>
           <children xmi:id="_J3ocklJYEeKeHOl6-nF-aA" elementId="org.eclipse.wst.xml.expand" name="XML Source Expand/Collapse" description="XML Source Expand/Collapse"/>
+          <children xmi:id="_68IV8YVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.xml.editorScope" name="WindowBuilder XML scope"/>
         </children>
         <children xmi:id="_J3mnaVJYEeKeHOl6-nF-aA" elementId="org.eclipse.mylyn.tasks.ui.editors.task" name="In Tasks Editor"/>
         <children xmi:id="_J3nOc1JYEeKeHOl6-nF-aA" elementId="org.eclipse.jst.pagedesigner.editorContext" name="Using Web Page Editor" description="Key binding context when using the web page editor"/>
@@ -796,6 +813,7 @@
           <children xmi:id="_J3n1iFJYEeKeHOl6-nF-aA" elementId="org.eclipse.mylyn.wikitext.tasks.ui.markupSourceContext" name="Task Markup Editor Source Context"/>
         </children>
         <children xmi:id="_J3ockFJYEeKeHOl6-nF-aA" elementId="org.eclipse.jst.jsf.facesconfig.editorContext" name="In Faces Config Editor" description="Key binding context when using the Faces Config Editor"/>
+        <children xmi:id="_68IV8IVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.java.editorScope" name="WindowBuilder Java scope"/>
       </children>
       <children xmi:id="_J3mAVlJYEeKeHOl6-nF-aA" elementId="org.eclipse.datatools.sqltools.schemaobjecteditor.schemaediting" name="Schema Object Editor" description="Schema Object Editor"/>
       <children xmi:id="_J3mAWFJYEeKeHOl6-nF-aA" elementId="org.eclipse.compare.compareEditorScope" name="Comparing in an Editor" description="Comparing in an Editor"/>
@@ -897,6 +915,10 @@
   <rootContext xmi:id="_LBkgIVJYEeKeHOl6-nF-aA" elementId="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" name="Auto::org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
   <rootContext xmi:id="_LBluQFJYEeKeHOl6-nF-aA" elementId="org.eclipse.wst.web.ui.wizardsActionSet" name="Auto::org.eclipse.wst.web.ui.wizardsActionSet"/>
   <rootContext xmi:id="_LBmVUFJYEeKeHOl6-nF-aA" elementId="org.eclipse.wst.ws.explorer.explorer" name="Auto::org.eclipse.wst.ws.explorer.explorer"/>
+  <rootContext xmi:id="_7CrC0IVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.editor.actions.SwitchAction" name="Auto::org.eclipse.wb.core.editor.actions.SwitchAction"/>
+  <rootContext xmi:id="_7CrC0oVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.xml.editor.actions.SwitchPairEditorAction" name="Auto::org.eclipse.wb.core.xml.editor.actions.SwitchPairEditorAction"/>
+  <rootContext xmi:id="_7CrC1IVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.xml.editor.actions.SwitchAction" name="Auto::org.eclipse.wb.core.xml.editor.actions.SwitchAction"/>
+  <rootContext xmi:id="_7S4pEIVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.ui.actionset" name="Auto::org.eclipse.wb.core.ui.actionset"/>
   <descriptors xmi:id="_J9dXwFJYEeKeHOl6-nF-aA" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
     <tags>Editor</tags>
   </descriptors>
@@ -1219,6 +1241,14 @@
   <descriptors xmi:id="_J-RQH1JYEeKeHOl6-nF-aA" elementId="org.eclipse.wst.xsl.ui.view.outline" label="Stylesheet Model" iconURI="platform:/plugin/org.eclipse.wst.xsl.ui/icons/full/hierarchy.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <tags>View</tags>
     <tags>categoryTag:XML</tags>
+  </descriptors>
+  <descriptors xmi:id="_7A46IIVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.StructureView" label="Structure" iconURI="platform:/plugin/org.eclipse.wb.core/icons/structure/properties_view.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:WindowBuilder</tags>
+  </descriptors>
+  <descriptors xmi:id="_7A46IYVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.PaletteView" label="Palette" iconURI="platform:/plugin/org.eclipse.wb.core/icons/structure/palette.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:WindowBuilder</tags>
   </descriptors>
   <commands xmi:id="_J1KXbVJYEeKeHOl6-nF-aA" elementId="e4.exit" contributorURI="platform:/plugin/org.eclipse.ui.workbench" commandName="%command.name.exit" description=""/>
   <commands xmi:id="_J1KXblJYEeKeHOl6-nF-aA" elementId="e4.show.view" contributorURI="platform:/plugin/org.eclipse.ui.workbench" commandName="%command.name.showView">
@@ -2097,6 +2127,11 @@
   <commands xmi:id="_KDE3kFJYEeKeHOl6-nF-aA" elementId="AUTOGEN:::org.eclipse.jdt.debug.ui.JavaSnippetToolbarActions/org.eclipse.jdt.debug.ui.SnippetDisplay" commandName="Displa&amp;y"/>
   <commands xmi:id="_KDGFsFJYEeKeHOl6-nF-aA" elementId="AUTOGEN:::org.eclipse.jdt.debug.ui.JavaSnippetToolbarActions/org.eclipse.jdt.debug.ui.SnippetInspect" commandName="Insp&amp;ect"/>
   <commands xmi:id="_KD26sFJYEeKeHOl6-nF-aA" elementId="AUTOGEN:::org.eclipse.ui.articles.action.contribution.editor/org.eclipse.wst.wsdl.ui.actions.ReloadDependenciesActionDelegate" commandName="Reload Dependencies"/>
+  <commands xmi:id="_67-k8oVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.xml.editor.actions.SwitchPairEditorAction" commandName="Switch Source/Design Editors" description="Switch between the Source and Design editors." category="_67-k8YVBEeKhS_oO8oQViA"/>
+  <commands xmi:id="_67-k84VBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.xml.editor.actions.SwitchAction" commandName="Switch Source/Design Views" description="Switch between the Source and Design views." category="_67-k8YVBEeKhS_oO8oQViA"/>
+  <commands xmi:id="_67-k9IVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.xml.commands.empty" commandName="Empty command" description="Command which does nothing" category="_67-k8YVBEeKhS_oO8oQViA"/>
+  <commands xmi:id="_67-k9YVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.commands.empty" commandName="Empty command" description="Command which does nothing" category="_67-k8YVBEeKhS_oO8oQViA"/>
+  <commands xmi:id="_67-k9oVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.commands.switch" commandName="Switch between Source/Design Views" description="Switch between the Source and Design views." category="_67-k8YVBEeKhS_oO8oQViA"/>
   <addons xmi:id="_J1KXclJYEeKeHOl6-nF-aA" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_J1KXc1JYEeKeHOl6-nF-aA" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_J1KXdFJYEeKeHOl6-nF-aA" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2150,4 +2185,5 @@
   <categories xmi:id="_J29uRFJYEeKeHOl6-nF-aA" elementId="org.eclipse.ltk.ui.category.refactoring" name="Refactoring"/>
   <categories xmi:id="_J29uRVJYEeKeHOl6-nF-aA" elementId="org.eclipse.jdt.ui.category.source" name="Source" description="Java Source Actions"/>
   <categories xmi:id="_J29uRlJYEeKeHOl6-nF-aA" elementId="org.eclipse.jdt.ui.category.refactoring" name="Refactor - Java" description="Java Refactoring Actions"/>
+  <categories xmi:id="_67-k8YVBEeKhS_oO8oQViA" elementId="org.eclipse.wb.core.actions.category" name="WindowBuilder Pro" description="WindowBuilder Pro actions"/>
 </application:Application>

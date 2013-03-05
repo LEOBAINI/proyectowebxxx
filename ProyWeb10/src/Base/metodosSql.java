@@ -159,6 +159,15 @@ public class metodosSql extends ConexionMySql {
 	
 	return fecha;
 	}
+	
+	public int dameMesActual(){
+		Date dia=new Date();
+		int fecha=dia.getMonth()+1;
+
+
+	
+	return fecha;
+	}
 
 	public int insertarOmodif(String sentenciaSql) {
 		int status=0;
