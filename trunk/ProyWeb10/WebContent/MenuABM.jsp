@@ -105,7 +105,8 @@ function getRadioButtonSelectedValue(ctrl)
 			<option value="cliente">Cliente</option>
 			<option value="tarea">Tarea</option>
 			<option value="subtarea">Subtarea</option>
-			<!--  <option value="departamento">Departamento</option>
+			<option value="departamento">Departamento</option>
+			<!--  
 			
 			
 			<option value="usuario">Usuario</option>-->
