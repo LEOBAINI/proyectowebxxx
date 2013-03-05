@@ -3,28 +3,32 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="107" key="DIALOG_Y_ORIGIN"/>
-		<item value="1058" key="DIALOG_X_ORIGIN"/>
 		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="1058" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="true" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="subTareas" key="selection"/>
+		<item value="categoria" key="selection"/>
 		<list key="findhistory">
+			<item value="direccion"/>
+			<item value="nombre"/>
+			<item value="apellido"/>
 			<item value="clientes"/>
 			<item value="cliente"/>
 			<item value="Cliente"/>
 			<item value="idCliente"/>
 			<item value="ACCION"/>
-			<item value="DESCRIPCION"/>
-			<item value="fechaConsulta"/>
-			<item value="statusBajaCliente"/>
 		</list>
 		<list key="replacehistory">
+			<item value="categoria"/>
+			<item value="telefono"/>
+			<item value="direccion"/>
+			<item value="nombre"/>
 			<item value="subTareas"/>
 			<item value="tarea"/>
 			<item value="idTarea"/>

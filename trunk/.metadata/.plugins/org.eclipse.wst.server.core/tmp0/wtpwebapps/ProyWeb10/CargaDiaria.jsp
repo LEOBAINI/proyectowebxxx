@@ -195,7 +195,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 			out.println("Depto.......");
 			ArrayList<String> array6 = new ArrayList<String>();
 			
-			array6=metodos.consultarUnaColumna("SELECT descripcion from departamento ");
+			array6=metodos.consultarUnaColumna("SELECT descripcion from departamento where Inhabilitado= 'NO';");
 			array6.add(0,"");
 			
 			out.println(" <select name=" + " departamento " + ">");
@@ -212,7 +212,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 			out.println("Tarea.......");
 			ArrayList<String> array7 = new ArrayList<String>();
 			
-			array7=metodos.consultarUnaColumna("SELECT descripcion from tarea ");
+			array7=metodos.consultarUnaColumna("SELECT descripcion from tarea where Inhabilitado= 'NO';");
 			array7.add(0,"");
 			
 
@@ -230,7 +230,7 @@ String fechaCarga=session.getAttribute("fechaCarga").toString();//toma la fecha 
 			out.println("Subtarea....");
 			ArrayList<String> array8 = new ArrayList<String>();
 			
-			array8=metodos.consultarUnaColumna("SELECT descripcion from subtarea ");
+			array8=metodos.consultarUnaColumna("SELECT descripcion from subtarea where Inhabilitado= 'NO'; ");
 			array8.add(0,"");
 			
 

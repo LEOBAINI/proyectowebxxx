@@ -1,0 +1,104 @@
+package Abm;
+
+
+import java.util.HashMap;
+
+public class Usuario extends Persistente{
+	//para tabla userlogin
+	private String usuario;
+	private String contrasenia;
+	private String permiso;
+	private int dni;
+	//para tabla personal
+	private int legajo;
+	private String especialidad;
+	private String apellido ;
+	private String nombre;
+	private String direccion;
+	private String telefono;
+	private int categoria;//obtener indice de tabla categoria
+	
+	private HashMap<Object, Object> todosLosAtributos;
+	
+	public Usuario(String usuario, String contrasenia, String permiso, int dni,int legajo,String especialidad,String apellido,
+			String nombre,String direccion,String telefono,int categoria) {
+		super();
+		HashMap<Object, Object> atributos=new HashMap<Object,Object>();
+		this.usuario = usuario;
+		this.contrasenia = contrasenia;
+		this.permiso = permiso;
+		this.dni = dni;
+		this.legajo=legajo;
+		this.especialidad=especialidad;
+		this.nombre=nombre;
+		this.direccion=direccion;
+		this.telefono=telefono;
+		this.categoria=categoria;
+		atributos.put("usuario", getUsuario());
+		atributos.put("contrasenia",getContrasenia());
+		atributos.put("permiso", getPermiso());
+		atributos.put("dni", getDni());
+		
+		this.todosLosAtributos=atributos;
+		
+	}
+	
+
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
+		this.todosLosAtributos.remove("usuario");
+		this.todosLosAtributos.put("usuario", usuario);
+	}
+
+	public String getContrasenia() {
+		return contrasenia;
+	}
+
+	public void setContrasenia(String contrasenia) {
+		this.contrasenia = contrasenia;
+		this.todosLosAtributos.remove("contrasenia");
+		this.todosLosAtributos.put("contrasenia", contrasenia);
+	}
+
+	public String getPermiso() {
+		return permiso;
+	}
+
+	public void setPermiso(String permiso) {
+		this.permiso = permiso;
+		this.todosLosAtributos.remove("permiso");
+		this.todosLosAtributos.put("permiso", permiso);
+	}
+
+	public int getDni() {
+		return dni;
+	}
+
+	public void setDni(int dni) {
+		this.dni = dni;
+		this.todosLosAtributos.remove("dni");
+		this.todosLosAtributos.put("dni", dni);
+	}
+	
+	public HashMap<Object, Object> todosLosAtributos(){
+		return this.todosLosAtributos;
+	}
+
+
+	
+	public String identificadorUnico() {
+		
+		return "dni";
+	}
+	
+	
+	
+	
+
+	
+
+}
