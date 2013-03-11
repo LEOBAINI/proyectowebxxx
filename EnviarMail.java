@@ -1,4 +1,3 @@
-
 import javax.mail.*; 
 import javax.mail.internet.*; 
 import java.util.*; 
@@ -21,7 +20,7 @@ import java.util.*;
 		// Nombre del host de correo, es smtp.gmail.com
 		props.setProperty("mail.smtp.host", "smtp.gmail.com");
 
-		// TLS si est· disponible
+		// TLS si est√° disponible
 		props.setProperty("mail.smtp.starttls.enable", "true");
 
 		// Puerto de gmail para envio de correos
@@ -54,9 +53,9 @@ import java.util.*;
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress(destinatario2));
 		
 		message.setSubject("Mails con java by LB");
-		message.setText("AprendÌ a mandar mails con java!!! disculpen las molestias ocasionadas, jajaja.");
+		message.setText("Aprend√≠ a mandar mails con java!!! disculpen las molestias ocasionadas, jajaja.");
 		
-		/*El siguiente cÛdigo crearÌa el mismo mensaje, pero con texto html y alg˙n adorno de negrita y cursiva
+		/*El siguiente c√≥digo crear√≠a el mismo mensaje, pero con texto html y alg√∫n adorno de negrita y cursiva
 
 message.setText(
 "Mensajito con Java Mail<br>" + "<b>de</b> los <i>buenos</i>." + "poque si",
@@ -67,9 +66,9 @@ message.setText(
 		
 		Transport t = session.getTransport("smtp");
 
-		//Ahora debemos establecer la conexiÛn, dando el nombre de usuario y password.
+		//Ahora debemos establecer la conexi√≥n, dando el nombre de usuario y password.
 
-		t.connect("bainileonardo@gmail.com","patagon1an");
+		t.connect("bainileonardo@gmail.com","contrase√±a");
 
 		//y ahora simplemente enviamos el mensaje
 
