@@ -20,12 +20,13 @@ public class Validacion {
 			int columnaUser = 0;
 			int columnaPass = 1;
 			int columnaPermiso = 2;
+			int columnaInhabilitado=4;
 			ArrayList<ArrayList<String>> matriz;
 
 			metodosSql m = new metodosSql();
 			matriz = m.consultar("select * from userlogin");
 			for (int i = 0; i < matriz.size(); i++) {
-				if (matriz.get(i).get(columnaUser).equals(usuario)) {
+				if (matriz.get(i).get(columnaUser).equals(usuario)&& matriz.get(i).get(columnaInhabilitado).equals("NO")) {
 					if (matriz.get(i).get(columnaPass).equals(contrasenia)) {
 						/*
 						 * System.out.println("Usuario correcto");

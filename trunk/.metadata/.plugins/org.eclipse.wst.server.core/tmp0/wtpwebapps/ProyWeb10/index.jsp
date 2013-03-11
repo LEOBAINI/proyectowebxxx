@@ -20,7 +20,7 @@
 
 <h1 align="center"><u>Bienvenido.</u></h1><br>
  
-<h2 align="center" ><u>Por favor, ingrese su nombre de usuario y contraseña.</u>                            v10<br></h2>
+<h2 align="center" ><u>Por favor, ingrese su nombre de usuario y contraseña.</u>                            v30<br></h2>
 
  <form action="Validacion.jsp" method="post">
 

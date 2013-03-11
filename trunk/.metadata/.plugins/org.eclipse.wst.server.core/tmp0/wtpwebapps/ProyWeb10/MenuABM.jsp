@@ -100,16 +100,14 @@ function getRadioButtonSelectedValue(ctrl)
  
  <input name="abm" value="Modificacion" type="radio">Modificacion<br>
  
- <div align="left"><a>Elija el objeto en cuestión</a> <br> <br>  <select
-			name="objetos">
+ <div align="left"><a>Elija el objeto en cuestión</a> <br> <br>  
+ 
+ <select name="objetos">
 			<option value="cliente">Cliente</option>
 			<option value="tarea">Tarea</option>
 			<option value="subtarea">Subtarea</option>
 			<option value="departamento">Departamento</option>
-			<!--  
-			
-			
-			<option value="usuario">Usuario</option>-->
+			<option value="usuario">Usuario</option>
 			
 
 		</select></div>

@@ -77,9 +77,10 @@ public class Main {
 		esc.crearExcelDesdeMatriz(matriz, rutaDestino, usuario);*/
 		
 		
-		Usuario user=new Usuario("lbadmin", "lbadmin", "administrador", 28737, 28737, "Senior", "Baini", "Leonardo", "Quint 3383", "4745-7242", 1);
+		/*Usuario user=new Usuario("lbadmin", "lbadmin", "administrador", 28737, 28737, "Baini", "Leonardo", "Quint 3383", "4745-7242", 1);
 		AdministradorABM admin=new AdministradorABM();
-		System.out.println(admin.darDeAltaUsuario(user));
+		System.out.println(admin.darDeAltaUsuario(user));*/
+		System.out.println(metodos.dameNroCategoria("Socio"));
 		
 		
 		

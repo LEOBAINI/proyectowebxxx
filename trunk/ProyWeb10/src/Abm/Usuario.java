@@ -11,7 +11,7 @@ public class Usuario extends Persistente{
 	private int dni;
 	//para tabla personal
 	private int legajo;
-	private String especialidad;
+	//private String especialidad;
 	private String apellido ;
 	private String nombre;
 	private String direccion;
@@ -20,7 +20,7 @@ public class Usuario extends Persistente{
 	
 	private HashMap<Object, Object> todosLosAtributos;
 	
-	public Usuario(String usuario, String contrasenia, String permiso, int dni,int legajo,String especialidad,String apellido,
+	public Usuario(String usuario, String contrasenia, String permiso, int dni,int legajo,String apellido,
 			String nombre,String direccion,String telefono,int categoria) {
 		super();
 		HashMap<Object, Object> atributos=new HashMap<Object,Object>();
@@ -29,7 +29,7 @@ public class Usuario extends Persistente{
 		this.permiso = permiso;
 		this.dni = dni;
 		this.legajo=legajo;
-		this.especialidad=especialidad;
+		//this.especialidad=especialidad;
 		this.apellido=apellido;
 		this.nombre=nombre;
 		this.direccion=direccion;
@@ -41,7 +41,7 @@ public class Usuario extends Persistente{
 		atributos.put("permiso", getPermiso());
 		atributos.put("dni", getDni());
 		atributos.put("legajo", getLegajo());
-		atributos.put("especialidad", getEspecialidad());
+		//atributos.put("especialidad", getEspecialidad());
 		atributos.put("nombre", getNombre());
 		atributos.put("apellido", getApellido());
 		atributos.put("direccion", getDireccion());
@@ -97,7 +97,7 @@ public class Usuario extends Persistente{
 		this.todosLosAtributos.put("legajo", legajo);
 	}
 	public void setEspecialidad(String especialidad) {
-		this.especialidad=especialidad;
+		//this.especialidad=especialidad;
 		this.todosLosAtributos.remove("especialidad");
 		this.todosLosAtributos.put("especialidad", especialidad);
 	}
@@ -157,9 +157,7 @@ public class Usuario extends Persistente{
 	}
 
 
-	public String getEspecialidad() {
-		return especialidad;
-	}
+	
 
 
 	public String getApellido() {
@@ -197,7 +195,7 @@ public class Usuario extends Persistente{
 	
 	public String identificadorUnico() {
 		
-		return "dni";
+		return "usuario";
 	}
 	
 	

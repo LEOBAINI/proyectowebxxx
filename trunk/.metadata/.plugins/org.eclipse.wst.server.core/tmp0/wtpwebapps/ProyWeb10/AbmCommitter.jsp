@@ -525,6 +525,148 @@ else if(session.getAttribute("solicitaAbm").equals("AbmDepto")){//inicio si vien
 	
 }//fin si viene de abmDepartamento
 
+else if(session.getAttribute("solicitaAbm").equals("AbmUsuario")){//inicio si viene de AbmUsuario
+	//out.println("vino de AbmUsuario");
+	try{
+	if(session.getAttribute("accion").equals("Alta")){//inicio si es para alta Usuario
+		
+		String usuario=request.getParameter("usuario");
+		String contrasenia=request.getParameter("contrasenia");
+		String nombre=request.getParameter("nombre");
+		String apellido=request.getParameter("apellido");
+		String permiso=request.getParameter("permiso");
+		int dni=Integer.parseInt(request.getParameter("dni"));
+		int legajo=Integer.parseInt(request.getParameter("legajo"));
+		String direccion=request.getParameter("direccion");
+		String telefono=request.getParameter("telefono");
+		metodosSql metodos=new metodosSql();
+		int categoria=metodos.dameNroCategoria(request.getParameter("categoria"));
+		
+		
+		Usuario _Usuario=new Usuario(usuario,contrasenia,permiso,dni,legajo,apellido,nombre,direccion,telefono,categoria);
+		//usando upper case por primera vez en el proyecto
+		if(admin.darDeAltaUsuario(_Usuario)==1){
+			%><script type="text/javascript">alert("Datos cargados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+		}		
+		
+		else{
+			
+			%><script type="text/javascript">alert("Hubo un problema, intente de nuevo cambiando el nombre de usuario por favor, puede que ya exista ese usuario y que esté deshabilitado.");
+			
+			 document.location=("MenuABM.jsp");
+			</script><%		
+			
+		}
+		
+		
+	}//fin si es para alta Usuario
+	}catch(Exception e){
+		out.println("Error!!! intente de nuevo si persiste el problema copie el error y envíelo a su administrador."+e.getMessage());
+	}
+	
+	
+	
+	
+	
+	//si viene de baja hacer..
+	if(session.getAttribute("accion").equals("Baja")){//inicio si es para baja Usuario
+		int statusBajaUsuario=0;
+		AdministradorABM adminBaja=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		out.println("baja");
+		
+		String usuario=URLDecoder.decode(request.getParameter("usuarios"), "UTF-8");
+		
+		
+		
+		
+		
+		
+		Usuario UsuarioDelete=new Usuario(usuario,null,null,0,0,null,null,null,null,0);
+		
+		statusBajaUsuario= adminBaja.InHabilitar(UsuarioDelete,conexion.getBase(),"userlogin");
+		if(statusBajaUsuario==1){
+			%><script type="text/javascript">alert("Datos borrados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se borraron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+		
+		
+		
+	}//fin si es para baja Usuario	
+	/*
+	if(session.getAttribute("accion").equals("Modificacion")){//inicio si es para modificacion Usuario
+		out.println("modificacion");
+	try{
+		int statusModifUsuario=0;
+		AdministradorABM adminModif=new AdministradorABM();
+		metodosSql metodos=new metodosSql();
+		
+		
+		
+		String Usuario=URLDecoder.decode(request.getParameter("Usuarios"), "UTF-8");
+		
+		
+		
+		
+		
+		int idUsuario=Integer.parseInt(metodos.consultarUnaColumna("SELECT max(idUsuario) FROM proyectoweb.Usuario;").get(0));
+		idUsuario++;
+		int idUsuarioDel=Integer.parseInt(metodos.consultarUnaColumna("SELECT idUsuario FROM proyectoweb.Usuario where descripcion= '"+Usuario+"' and inHabilitado='NO';").get(0));
+		String nuevaDescripcionUsuario=request.getParameter("nuevoValor");
+		Usuario nuevaUsuario=new Usuario(idUsuario,nuevaDescripcionUsuario);
+		Usuario UsuarioDelete=new Usuario(idUsuarioDel,Usuario);
+		
+		statusModifUsuario= adminModif.InHabilitar(UsuarioDelete,conexion.getBase(),"Usuario");
+		statusModifUsuario=statusModifUsuario+adminModif.darDeAlta(nuevaUsuario,conexion.getBase(), "Usuario");
+		
+		
+		if(statusModifUsuario==2){
+			%><script type="text/javascript">alert("Datos modificados con éxito!");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}else{
+			%><script type="text/javascript">alert("Los datos no se modificaron, intente de nuevo...");
+			 document.location=("MenuABM.jsp");//redireccion 
+			
+			</script><%
+			
+		}
+	}catch(Exception e){
+		out.println("Error, compruebe los datos suministrados e intente de nuevo... :\n "+e.getMessage());
+		
+		%><a href="MenuABM.jsp" >Volver a ABM</a><%
+		
+	}
+	
+	
+	
+	
+	
+	
+		
+	}//fin si es para modificacion de Usuario
+	*/
+	
+	
+	
+	
+	
+}//fin si viene de abmUsuario
+
 
 
 
