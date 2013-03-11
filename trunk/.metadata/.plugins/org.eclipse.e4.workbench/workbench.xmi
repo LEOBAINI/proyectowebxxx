@@ -61,7 +61,7 @@
           <tags>persp.actionSet:org.eclipse.wst.server.ui.internal.webbrowser.actionSet</tags>
           <tags>persp.actionSet:org.eclipse.debug.ui.breakpointActionSet</tags>
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_4HCX4FnuEeKfgaB-6y_v3Q" selectedElement="_4HIegFnuEeKfgaB-6y_v3Q" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_4HCX4FnuEeKfgaB-6y_v3Q" selectedElement="_4HIehVnuEeKfgaB-6y_v3Q" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_4HIegFnuEeKfgaB-6y_v3Q" elementId="topLeft" containerData="2217" selectedElement="_4HIegVnuEeKfgaB-6y_v3Q">
               <tags>newtablook</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_4HIegVnuEeKfgaB-6y_v3Q" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_bJiCMFJYEeKwQKPxVs-dyg"/>
@@ -69,7 +69,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_4HIeg1nuEeKfgaB-6y_v3Q" elementId="org.eclipse.jdt.ui.TypeHierarchy" toBeRendered="false" ref="_bJnhwFJYEeKwQKPxVs-dyg"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_4HIehFnuEeKfgaB-6y_v3Q" elementId="org.eclipse.jdt.ui.PackagesView" toBeRendered="false" ref="_bPkYwFJYEeKwQKPxVs-dyg"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_4HIehVnuEeKfgaB-6y_v3Q" containerData="7783" selectedElement="_4HIei1nuEeKfgaB-6y_v3Q">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_4HIehVnuEeKfgaB-6y_v3Q" containerData="7783" selectedElement="_4HIehlnuEeKfgaB-6y_v3Q">
               <children xsi:type="basic:PartSashContainer" xmi:id="_4HIehlnuEeKfgaB-6y_v3Q" containerData="7341" selectedElement="_4HIeh1nuEeKfgaB-6y_v3Q" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_4HIeh1nuEeKfgaB-6y_v3Q" elementId="org.eclipse.ui.editorss" containerData="9000" ref="_bJEvMFJYEeKwQKPxVs-dyg"/>
                 <children xsi:type="basic:PartStack" xmi:id="_4HIeiFnuEeKfgaB-6y_v3Q" elementId="topRight" containerData="1000" selectedElement="_4HIeiVnuEeKfgaB-6y_v3Q">
@@ -302,7 +302,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_bJEvMFJYEeKwQKPxVs-dyg" elementId="org.eclipse.ui.editorss" selectedElement="_bJEvMVJYEeKwQKPxVs-dyg">
-      <children xsi:type="basic:PartStack" xmi:id="_bJEvMVJYEeKwQKPxVs-dyg" elementId="PartStack@1d66e72" selectedElement="_zgCIsInfEeK3Sek-n3rJMg">
+      <children xsi:type="basic:PartStack" xmi:id="_bJEvMVJYEeKwQKPxVs-dyg" elementId="PartStack@1d66e72" selectedElement="_LyrgUIn4EeKwNuT61ncknA">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
@@ -327,12 +327,17 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_zgCIsInfEeK3Sek-n3rJMg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="AbmCommitter.jsp" iconURI="platform:/plugin/org.eclipse.jst.jsp.ui//icons//full/obj16/sourceEditor.gif" tooltip="ProyWeb10/WebContent/AbmCommitter.jsp" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/WebContent/AbmCommitter.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;5&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;18071&quot; selectionTopPixel=&quot;8070&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jst.jsp.core.jspsource.source&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/WebContent/AbmCommitter.jsp&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;18071&quot; selectionTopPixel=&quot;8070&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_59jo8InjEeK3Sek-n3rJMg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Usuario.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ProyWeb10/src/Abm/Usuario.java" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/src/Abm/Usuario.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1612&quot; selectionTopPixel=&quot;566&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_LyrgUIn4EeKwNuT61ncknA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Main.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ProyWeb10/src/prueba/Main.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ProyWeb10/src/prueba/Main.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2066&quot; selectionTopPixel=&quot;765&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>

@@ -81,6 +81,7 @@ public class Main {
 		AdministradorABM admin=new AdministradorABM();
 		System.out.println(admin.darDeAltaUsuario(user));*/
 		System.out.println(metodos.dameNroCategoria("Socio"));
+		//probando si llega por mail de google code
 		
 		
 		
