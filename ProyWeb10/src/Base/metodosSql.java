@@ -162,6 +162,7 @@ public class metodosSql extends ConexionMySql {
 	
 	public int dameMesActual(){
 		Date dia=new Date();
+		@SuppressWarnings("deprecation")
 		int fecha=dia.getMonth()+1;
 
 
@@ -380,6 +381,18 @@ public class metodosSql extends ConexionMySql {
 		}
 		return status;
 
+	}
+	/**
+	 * Éste método devuelve el numero de categoria de un empleado, dependiendo de la descripción
+	 * que se brinde, ejemplocategoria 1= Socio, Categoria 2 = Ayudante...
+	 * @param descripcion
+	 * @return
+	 */
+	public int dameNroCategoria(String descripcion){
+		metodosSql metodos = new metodosSql();
+		String numero=metodos.consultarUnaColumna("Select idCategoriaPersonal from proyectoweb.categoriapersonal where descripcion= '"+descripcion+"';").get(0);
+		int _numero=Integer.parseInt(numero);
+		return _numero;
 	}
 	
 

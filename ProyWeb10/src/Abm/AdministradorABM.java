@@ -59,8 +59,8 @@ public class AdministradorABM {
 		metodosSql metodos=new metodosSql();
 		int status=0;
 		
-		status= metodos.insertarOmodif("INSERT INTO `proyectoweb`.`personal` (`Dni`, `Legajo`, `Especialidad`, `Apellido`, `Nombre`, `Direccion`, `Telefono`, `categoria`)"
-		 + "VALUES ("+usuario.getDni()+", "+usuario.getLegajo()+", '"+usuario.getEspecialidad()+"', '"+usuario.getApellido()+"'," +
+		status= metodos.insertarOmodif("INSERT INTO `proyectoweb`.`personal` (`Dni`, `Legajo`, `Apellido`, `Nombre`, `Direccion`, `Telefono`, `categoria`)"
+		 + "VALUES ("+usuario.getDni()+", "+usuario.getLegajo()+", '"+usuario.getApellido()+"'," +
 		 		" '"+usuario.getNombre()+"', '"+usuario.getDireccion()+"', '"+usuario.getTelefono()+"', "+usuario.getCategoria()+");");//primero en la base personal
 
 		 
